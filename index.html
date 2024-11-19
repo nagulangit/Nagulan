@@ -3,97 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Profile - Nagulan</title>
+  <title>Nagulan A | Site Reliability Engineer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #121212; /* Dark background */
-      color: #E0E0E0; /* Light text */
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #121212;
+      color: #E0E0E0;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
     header {
-      background-color: #4CAF50; /* Green header */
+      background-color: #1F2937;
       color: white;
-      padding: 20px 0;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
-    h1 {
+    header h1 {
       margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #9CA3AF;
     }
     main {
-      padding: 20px;
-    }
-    footer {
-      background-color: #1F1F1F; /* Footer dark gray */
-      color: white;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    a {
-      color: #2196F3; /* Accent blue for links */
-      text-decoration: none;
-    }
-    a:hover {
-      color: #64B5F6; /* Lighter blue on hover */
-    }
-    .profile-card {
-      background-color: #1E1E1E; /* Card dark gray */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      max-width: 600px;
+      max-width: 900px;
       margin: 20px auto;
-      text-align: left;
+      padding: 20px;
+      background-color: #1E1E1E;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
-    .profile-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
+    section {
       margin-bottom: 20px;
     }
-    .skills {
-      margin-top: 20px;
+    h2 {
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    .profile {
+      text-align: center;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .profile h3 {
+      margin: 10px 0;
     }
     .skills span {
       display: inline-block;
-      background-color: #333;
-      color: #E0E0E0;
+      background-color: #2196F3;
+      color: white;
       padding: 5px 10px;
-      border-radius: 5px;
       margin: 5px;
+      border-radius: 20px;
+      font-size: 0.9em;
+    }
+    a {
+      color: #64B5F6;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #90CAF9;
+    }
+    footer {
+      text-align: center;
+      background-color: #1F2937;
+      color: white;
+      padding: 10px 0;
+      margin-top: 20px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Professional Profile - Nagulan</h1>
+    <h1>Nagulan A</h1>
+    <p>Site Reliability Engineer | GCP Certified</p>
   </header>
+
   <main>
-    <div class="profile-card">
-      <img src="1000079900.jpg" alt="Nagulan's Profile Picture">
-      <h2>Nagulan A</h2>
-      <p><strong>Site Reliability Engineer</strong></p>
-      <p>Site Reliability Engineer with expertise in cloud infrastructure management and automation. Certified GCP Associate Cloud Engineer with a focus on enhancing operational efficiency and security.</p>
-      <h3>Contact</h3>
-      <p>Phone: 8946052679</p>
-      <p>Email: <a href="mailto:nagulan@example.com">nagulan@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/nagulan-a-46006325a/" target="_blank">https://www.linkedin.com/in/nagulan-a-46006325a/</a></p>
-      <h3>Skills</h3>
+    <!-- Profile Section -->
+    <section class="profile">
+      <img src="1000079900.jpg" alt="Nagulan A">
+      <h3>Nagulan A</h3>
+      <p>Site Reliability Engineer specializing in cloud infrastructure management and automation. Proficient in GCP, AWS, and modern DevOps tools.</p>
+      <a href="https://www.linkedin.com/in/nagulan-a-46006325a/" target="_blank">View LinkedIn Profile</a>
+    </section>
+
+    <!-- Summary Section -->
+    <section>
+      <h2>Summary</h2>
+      <p>Experienced Site Reliability Engineer with a focus on enhancing operational efficiency and security in production environments. Skilled in optimizing resource usage and implementing monitoring solutions to ensure reliability.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+      <h2>Skills</h2>
       <div class="skills">
         <span>GCP</span>
         <span>AWS</span>
-        <span>Jenkins</span>
-        <span>PM2</span>
-        <span>Node.js</span>
         <span>Docker</span>
+        <span>Prometheus</span>
+        <span>Jenkins</span>
         <span>MySQL</span>
-        <span>Apache2</span>
+        <span>CloudFormation</span>
+        <span>Node.js</span>
+        <span>Apache</span>
         <span>Nginx</span>
       </div>
-    </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section>
+      <h2>Professional Experience</h2>
+      <ul>
+        <li>Implemented OpenVPN and enforced Git security best practices in production environments.</li>
+        <li>Managed AWS and GCP cloud services, resolving infrastructure issues and enhancing monitoring.</li>
+        <li>Set up disaster recovery solutions and optimized cloud resource usage to reduce costs.</li>
+      </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section>
+      <h2>Education</h2>
+      <p><strong>Coimbatore Institute of Technology</strong><br>Bachelor of Engineering in Electronics and Communication (2019-2023)</p>
+    </section>
+
+    <!-- Certifications Section -->
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>GCP Certified Associate Cloud Engineer</li>
+      </ul>
+    </section>
   </main>
+
   <footer>
     <p>&copy; 2024 Nagulan A. All Rights Reserved.</p>
   </footer>
