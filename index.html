@@ -3,148 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nagulan A - Professional Profile</title>
+  <title>Professional Profile - Nagulan</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #121212; /* Dark background */
+      color: #E0E0E0; /* Light text */
       margin: 0;
       padding: 0;
-      background: #f0f4f8;
-      color: #333;
     }
     header {
-      background: #42f5ef;
+      background-color: #4CAF50; /* Green header */
       color: white;
       padding: 20px 0;
-      text-align: center;
     }
-    header h1 {
+    h1 {
       margin: 0;
     }
-    header p {
-      margin: 5px 0;
-    }
-    .profile {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    main {
       padding: 20px;
-    }
-    .profile img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      margin-right: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .profile-details h2 {
-      margin: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    section {
-      margin-bottom: 20px;
-    }
-    h3 {
-      border-bottom: 2px solid #42f5ef;
-      display: inline-block;
-      margin-bottom: 10px;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    ul li {
-      margin: 5px 0;
-      display: flex;
-      align-items: center;
-    }
-    ul li::before {
-      content: "✔";
-      color: #42f5ef;
-      font-weight: bold;
-      margin-right: 10px;
     }
     footer {
-      text-align: center;
-      padding: 10px;
-      background: #333;
+      background-color: #1F1F1F; /* Footer dark gray */
       color: white;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
     a {
-      color: #4CAF50;
+      color: #2196F3; /* Accent blue for links */
       text-decoration: none;
     }
     a:hover {
-      text-decoration: underline;
+      color: #64B5F6; /* Lighter blue on hover */
+    }
+    .profile-card {
+      background-color: #1E1E1E; /* Card dark gray */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+    }
+    .profile-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .skills {
+      margin-top: 20px;
+    }
+    .skills span {
+      display: inline-block;
+      background-color: #333;
+      color: #E0E0E0;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin: 5px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Nagulan A</h1>
-    <p>Site Reliability Engineer</p>
+    <h1>Professional Profile - Nagulan</h1>
   </header>
-  <div class="profile">
-    <img src="1000079900.jpg" alt="Nagulan's Profile Picture">
-    <div class="profile-details">
-      <h2>Contact Information</h2>
-      <p>📞 8946052679</p>
-      <p>🌐 <a href="https://www.linkedin.com/in/nagulan-a-46006325a/" target="_blank">LinkedIn Profile</a></p>
-    </div>
-  </div>
-  <div class="container">
-    <section>
-      <h3>Professional Summary</h3>
-      <p>Site Reliability Engineer with one year of experience at Ankercloud, specializing in cloud infrastructure management and automation. GCP Certified Associate Cloud Engineer focusing on operational efficiency, security, and resource optimization.</p>
-    </section>
-    <section>
-      <h3>Education</h3>
-      <ul>
-        <li>Bachelor of Engineering in Electronics and Communication, 2019-2023</li>
-        <li>Coimbatore Institute of Technology</li>
-      </ul>
-    </section>
-    <section>
+  <main>
+    <div class="profile-card">
+      <img src="1000079900.jpg" alt="Nagulan's Profile Picture">
+      <h2>Nagulan A</h2>
+      <p><strong>Site Reliability Engineer</strong></p>
+      <p>Site Reliability Engineer with expertise in cloud infrastructure management and automation. Certified GCP Associate Cloud Engineer with a focus on enhancing operational efficiency and security.</p>
+      <h3>Contact</h3>
+      <p>Phone: 8946052679</p>
+      <p>Email: <a href="mailto:nagulan@example.com">nagulan@example.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/nagulan-a-46006325a/" target="_blank">https://www.linkedin.com/in/nagulan-a-46006325a/</a></p>
       <h3>Skills</h3>
-      <ul>
-        <li>Cloud Infrastructure: GCP, AWS</li>
-        <li>Server Management: Jenkins, PM2, MySQL, Node.js, Apache2, Nginx</li>
-        <li>Monitoring & Automation: Prometheus, Grafana, AWS CloudWatch</li>
-        <li>Containerization: Docker, ECS, EKS</li>
-        <li>CI/CD Tools: GitLab, Jenkins, Ansible</li>
-        <li>Security: Git security codes, OpenVPN</li>
-      </ul>
-    </section>
-    <section>
-      <h3>Projects</h3>
-      <ul>
-        <li>Upgraded Jenkins and Ubuntu OS with minimal downtime.</li>
-        <li>Managed a multi-tier AWS infrastructure for high availability.</li>
-        <li>Implemented disaster recovery for Zimyo, including load balancers and CloudFront.</li>
-        <li>Deployed a Flask application on production-ready servers.</li>
-      </ul>
-    </section>
-    <section>
-      <h3>Certifications</h3>
-      <ul>
-        <li>GCP Certified Associate Cloud Engineer</li>
-      </ul>
-    </section>
-    <section>
-      <h3>Languages</h3>
-      <ul>
-        <li>English</li>
-        <li>Tamil</li>
-      </ul>
-    </section>
-  </div>
+      <div class="skills">
+        <span>GCP</span>
+        <span>AWS</span>
+        <span>Jenkins</span>
+        <span>PM2</span>
+        <span>Node.js</span>
+        <span>Docker</span>
+        <span>MySQL</span>
+        <span>Apache2</span>
+        <span>Nginx</span>
+      </div>
+    </div>
+  </main>
   <footer>
-    <p>&copy; 2024 Nagulan A | Professional Profile</p>
+    <p>&copy; 2024 Nagulan A. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
