@@ -3,11 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome Nagulan</title>
+  <title>Nagulan A - Professional Profile</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    header p {
+      margin: 5px 0;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .profile img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-right: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .profile-details h2 {
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+    h3 {
+      border-bottom: 2px solid #4CAF50;
+      display: inline-block;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+    }
+    ul li::before {
+      content: "✔";
+      color: #4CAF50;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; text-align: center; padding: 20px;">
-  <h1>Welcome Guys </h1>
-  <img src="1000079900.jpg">
-  <p>This is a simple HTML page.</p>
+<body>
+  <header>
+    <h1>Nagulan A</h1>
+    <p>Site Reliability Engineer</p>
+  </header>
+  <div class="profile">
+    <img src="1000079900.jpg" alt="Nagulan's Profile Picture">
+    <div class="profile-details">
+      <h2>Contact Information</h2>
+      <p>📞 8946052679</p>
+      <p>🌐 <a href="https://www.linkedin.com/in/nagulan-a-46006325a/" target="_blank">LinkedIn Profile</a></p>
+    </div>
+  </div>
+  <div class="container">
+    <section>
+      <h3>Professional Summary</h3>
+      <p>Site Reliability Engineer with one year of experience at Ankercloud, specializing in cloud infrastructure management and automation. GCP Certified Associate Cloud Engineer focusing on operational efficiency, security, and resource optimization.</p>
+    </section>
+    <section>
+      <h3>Education</h3>
+      <ul>
+        <li>Bachelor of Engineering in Electronics and Communication, 2019-2023</li>
+        <li>Coimbatore Institute of Technology</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Skills</h3>
+      <ul>
+        <li>Cloud Infrastructure: GCP, AWS</li>
+        <li>Server Management: Jenkins, PM2, MySQL, Node.js, Apache2, Nginx</li>
+        <li>Monitoring & Automation: Prometheus, Grafana, AWS CloudWatch</li>
+        <li>Containerization: Docker, ECS, EKS</li>
+        <li>CI/CD Tools: GitLab, Jenkins, Ansible</li>
+        <li>Security: Git security codes, OpenVPN</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Projects</h3>
+      <ul>
+        <li>Upgraded Jenkins and Ubuntu OS with minimal downtime.</li>
+        <li>Managed a multi-tier AWS infrastructure for high availability.</li>
+        <li>Implemented disaster recovery for Zimyo, including load balancers and CloudFront.</li>
+        <li>Deployed a Flask application on production-ready servers.</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Certifications</h3>
+      <ul>
+        <li>GCP Certified Associate Cloud Engineer</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Languages</h3>
+      <ul>
+        <li>English</li>
+        <li>Tamil</li>
+      </ul>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2024 Nagulan A | Professional Profile</p>
+  </footer>
 </body>
 </html>
