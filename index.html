@@ -5,50 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nagulan A | Professional Profile</title>
   <style>
-    /* General Reset */
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Background & Typography */
     body {
-      font-family: 'Roboto', Arial, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
-      color: #eaeaea;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: #f5f5f5;
+      color: #333;
       line-height: 1.6;
     }
 
     /* Header Section */
     header {
+      background: #2c3e50;
+      color: #ecf0f1;
       text-align: center;
       padding: 50px 20px;
-      background: linear-gradient(135deg, #0f3460, #1a1a2e);
-      color: white;
-      border-bottom: 4px solid #00adb5;
+      border-bottom: 5px solid #16a085;
     }
 
     header h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin-bottom: 10px;
       font-weight: bold;
     }
 
     header p {
-      font-size: 1.2em;
+      font-size: 1.3em;
       font-style: italic;
-      color: #b2becd;
     }
 
     /* Main Container */
     main {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 30px auto;
-      padding: 20px;
+      padding: 30px;
+      background: #fff;
       border-radius: 10px;
-      background: #21242d;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     /* Profile Section */
@@ -61,85 +59,92 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      border: 4px solid #00adb5;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-      margin-bottom: 15px;
+      border: 4px solid #16a085;
+      margin-bottom: 20px;
     }
 
     .profile h3 {
-      font-size: 1.8em;
-      color: #00adb5;
+      font-size: 2em;
+      color: #2c3e50;
+      margin-bottom: 5px;
     }
 
     .profile p {
-      color: #b2becd;
-      font-size: 1em;
+      color: #7f8c8d;
     }
 
     .profile a {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
+      margin-top: 15px;
+      padding: 10px 25px;
       font-size: 1em;
-      color: white;
-      background: #00adb5;
+      color: #fff;
+      background: #16a085;
       text-decoration: none;
       border-radius: 20px;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
     }
 
     .profile a:hover {
-      background: #007b7b;
+      background: #1abc9c;
     }
 
-    /* Section Styling */
-    section {
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-      color: #00adb5;
-      border-bottom: 2px solid #00adb5;
+    /* Section Titles */
+    section h2 {
+      font-size: 1.8em;
+      color: #16a085;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #16a085;
       display: inline-block;
+      padding-bottom: 5px;
     }
 
-    ul, p {
-      margin-top: 10px;
+    /* Content Styles */
+    section p, ul {
+      margin-top: 15px;
       font-size: 1.1em;
+      color: #555;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 20px;
     }
 
     ul li {
       margin-bottom: 10px;
     }
 
-    /* Skills Styling */
+    /* Skills Section */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .skills span {
       display: inline-block;
-      background: #00adb5;
-      color: white;
-      padding: 8px 15px;
-      margin: 5px;
-      border-radius: 25px;
+      background: #16a085;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
       font-size: 0.9em;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s;
+      transition: transform 0.3s;
     }
 
     .skills span:hover {
-      transform: scale(1.1);
+      transform: translateY(-5px);
     }
 
     /* Footer */
     footer {
       text-align: center;
-      padding: 15px;
-      background: #1a1a2e;
-      color: #b2becd;
+      padding: 20px;
+      background: #2c3e50;
+      color: #ecf0f1;
       margin-top: 30px;
       font-size: 0.9em;
-      border-top: 2px solid #00adb5;
+      border-top: 5px solid #16a085;
     }
 
     footer p {
@@ -147,7 +152,7 @@
     }
 
     footer a {
-      color: #00adb5;
+      color: #1abc9c;
       text-decoration: none;
     }
 
@@ -161,12 +166,13 @@
         font-size: 2.5em;
       }
 
-      main {
-        padding: 15px;
-      }
-
       .skills span {
         font-size: 0.8em;
+        padding: 8px 15px;
+      }
+
+      main {
+        padding: 20px;
       }
     }
   </style>
@@ -184,41 +190,42 @@
     <section class="profile">
       <img src="1000079900.jpg" alt="Nagulan A">
       <h3>Nagulan A</h3>
-      <p>Cloud infrastructure and automation expert with a focus on operational efficiency and reliability.</p>
+      <p>Focused on reliability, efficiency, and innovation in cloud infrastructure management.</p>
       <a href="https://www.linkedin.com/in/nagulan-a-46006325a/" target="_blank">LinkedIn Profile</a>
     </section>
 
     <!-- Summary Section -->
     <section>
       <h2>Summary</h2>
-      <p>Site Reliability Engineer with one year of experience at Ankercloud, specializing in cloud infrastructure management, monitoring, and security enhancements. Proficient in optimizing resource usage and reducing operational overhead.</p>
+      <p>
+        Site Reliability Engineer with one year of experience at Ankercloud, specializing in cloud infrastructure management,
+        monitoring, and security enhancements. Dedicated to optimizing operations and delivering scalable solutions.
+      </p>
     </section>
 
     <!-- Skills Section -->
     <section>
       <h2>Skills</h2>
       <div class="skills">
-        <span>GCP</span>
-        <span>AWS</span>
-        <span>Docker</span>
-        <span>Prometheus</span>
-        <span>Grafana</span>
-        <span>MySQL</span>
-        <span>Jenkins</span>
-        <span>Node.js</span>
-        <span>Apache</span>
-        <span>Nginx</span>
+        <span>Cloud: GCP, AWS</span>
+        <span>Automation: Prometheus, Grafana</span>
+        <span>Server Management: Apache, Nginx</span>
+        <span>Databases: MySQL</span>
+        <span>Containerization: Docker</span>
+        <span>CI/CD: Jenkins, GitLab</span>
+        <span>Programming: Node.js</span>
+        <span>Monitoring: CloudWatch</span>
       </div>
     </section>
 
-    <!-- Professional Experience -->
+    <!-- Experience Section -->
     <section>
       <h2>Experience</h2>
       <ul>
-        <li>Implemented OpenVPN and enforced Git security best practices for production environments.</li>
-        <li>Optimized patch management and performed security audits for cloud services.</li>
-        <li>Reduced costs by deploying multiple Node.js applications on EC2 instances.</li>
-        <li>Designed and managed multi-tier AWS architectures with load balancing and disaster recovery.</li>
+        <li>Implemented OpenVPN and Git security best practices for production environments.</li>
+        <li>Optimized AWS and GCP resources to reduce costs and enhance availability.</li>
+        <li>Designed multi-tier infrastructure with load balancing and disaster recovery solutions.</li>
+        <li>Configured MySQL databases for query and user activity tracking.</li>
       </ul>
     </section>
 
