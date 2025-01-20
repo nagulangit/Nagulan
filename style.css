@@ -1,76 +1,157 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(45deg, #f4f4f9, #d4d4e3);
-    color: #333;
+    background: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
     margin: 0;
     padding: 0;
 }
 
-/* Container */
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Header Section */
+/* Header */
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #0078D7;
-    margin-bottom: 10px;
-}
-
-header h1 {
-    margin: 10px 0;
-    font-size: 2em;
+header .glow {
+    font-size: 3em;
     color: #0078D7;
+    text-shadow: 0 0 10px #0078D7, 0 0 20px #0078D7, 0 0 30px #0078D7;
+    animation: glow 2s infinite;
 }
 
-header h2 {
+header .typing {
     font-size: 1.5em;
-    color: #333;
+    color: #4CAF50;
+    border-right: 2px solid #4CAF50;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(20, end), blink 0.6s step-end infinite;
 }
 
-header p {
-    margin: 5px 0;
-}
-
-/* Sections */
+/* About Section */
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 section h3 {
-    font-size: 1.5em;
-    color: #0078D7;
-    border-bottom: 2px solid #0078D7;
-    padding-bottom: 5px;
+    font-size: 1.8em;
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
     margin-bottom: 10px;
 }
 
-ul {
-    list-style-type: square;
-    padding-left: 20px;
+.highlight {
+    color: #0078D7;
+    font-weight: bold;
+}
+
+/* Skills Section */
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill label {
+    font-size: 1.2em;
+}
+
+.skill-bar {
+    background: #282828;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.skill-level {
+    height: 10px;
+    background: #4CAF50;
+}
+
+/* Portfolio Section */
+.portfolio {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    flex: 1 1 calc(50% - 20px);
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    background: #282828;
+    color: #e0e0e0;
+}
+
+form button {
+    background: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0078D7;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background: #0078D7;
-    color: #fff;
-    border-radius: 8px;
+    margin-top: 30px;
+    color: #4CAF50;
+}
+
+/* Animations */
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 10px #0078D7, 0 0 20px #0078D7, 0 0 30px #0078D7;
+    }
+    50% {
+        text-shadow: 0 0 20px #4CAF50, 0 0 40px #4CAF50, 0 0 60px #4CAF50;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-right-color: transparent;
+    }
+    50% {
+        border-right-color: #4CAF50;
+    }
 }
