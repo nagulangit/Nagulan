@@ -3,71 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nagulan A - Resume</title>
+    <title>Nagulan A - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <!-- Header Section -->
         <header>
-            <img src="profile.jpg" alt="Nagulan A" class="profile-pic">
-            <h1>NAGULAN A</h1>
-            <h2>Site Reliability Engineer</h2>
-            <p><strong>Phone:</strong> 8946052679 | <strong>Email:</strong> <a href="mailto:nagulanayyasamy226@gmail.com">nagulanayyasamy226@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nagulan-a-46006325a/" target="_blank">Nagulan A</a></p>
+            <h1 class="glow">NAGULAN A</h1>
+            <h2 class="typing">Site Reliability Engineer | Cloud Enthusiast</h2>
         </header>
 
-        <!-- Education Section -->
-        <section>
-            <h3>Education</h3>
-            <p><strong>Coimbatore Institute of Technology (2019-2023)</strong></p>
-            <p>Bachelor of Engineering in Electronics and Communication</p>
+        <!-- About Section -->
+        <section id="about">
+            <h3>About Me</h3>
+            <p>Hi, I'm <span class="highlight">Nagulan</span>, a skilled Site Reliability Engineer with a knack for automating infrastructure, ensuring system reliability, and solving tricky cloud problems.</p>
         </section>
 
         <!-- Skills Section -->
-        <section>
+        <section id="skills">
             <h3>Skills</h3>
-            <ul>
-                <li><strong>Cloud Infrastructure:</strong> GCP, AWS</li>
-                <li><strong>Server Management:</strong> Jenkins, PM2, MySQL, Node.js, Apache2, Nginx</li>
-                <li><strong>Automation & Monitoring:</strong> Prometheus, Grafana, AWS CloudWatch</li>
-                <li><strong>Security:</strong> OpenVPN, Git security codes</li>
-                <li><strong>CI/CD Tools:</strong> GitLab, Jenkins, Ansible</li>
-                <li><strong>Infrastructure as Code:</strong> AWS CloudFormation</li>
-            </ul>
+            <div class="skill">
+                <label>Cloud Infrastructure (AWS, GCP)</label>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <label>Server Management</label>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <label>Automation & Monitoring</label>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;"></div>
+                </div>
+            </div>
         </section>
 
-        <!-- Certifications Section -->
-        <section>
-            <h3>Certifications</h3>
-            <ul>
-                <li>GCP Certified Associate Cloud Engineer</li>
-            </ul>
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h3>Portfolio</h3>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <p>Cloud Optimization Project</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <p>Infrastructure Automation</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Summary Section -->
-        <section>
-            <h3>Summary</h3>
-            <p>Site Reliability Engineer with 1.5 years of experience at Ankercloud, specializing in cloud infrastructure management and automation. Focused on enhancing operational efficiency and security in production environments.</p>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h3>Contact Me</h3>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
         </section>
 
-        <!-- Professional Experience Section -->
-        <section>
-            <h3>Professional Experience</h3>
-            <p><strong>Site Reliability Engineer - Ankercloud (August 2023 – Present)</strong></p>
-            <ul>
-                <li>Managed client inquiries and resolved infrastructure and website availability tickets.</li>
-                <li>Provided monitoring and troubleshooting support for AWS and GCP services.</li>
-                <li>Implemented OpenVPN and enforced Git security best practices.</li>
-                <li>Created cloud architecture diagrams and optimized patch management.</li>
-                <li>Configured MySQL databases with user tracking.</li>
-            </ul>
-        </section>
-
-        <!-- Footer Section -->
         <footer>
             <p>© 2025 Nagulan A. All Rights Reserved.</p>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
