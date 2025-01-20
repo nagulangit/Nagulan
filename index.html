@@ -3,83 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nagulan A - Fun & Professional Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Your Name - Professional & Fun Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
-    <!-- Fun Particle Background -->
-    <div id="particles-js"></div>
 
-    <div class="container">
-        <!-- Header Section -->
-        <header>
-            <h1 class="glow">NAGULAN A</h1>
-            <h2 class="typing">Site Reliability Engineer | Cloud Enthusiast</h2>
-        </header>
+    <header>
+        <h1>Welcome to My Professional & Fun Portfolio!</h1>
+    </header>
 
-        <!-- About Section -->
-        <section id="about" class="gimmick">
-            <h3>About Me</h3>
-            <p>Hi, I'm <span class="highlight">Nagulan</span>, a skilled Site Reliability Engineer with a knack for automating infrastructure, ensuring system reliability, and solving tricky cloud problems. Fun fact: I'm into playful designs!</p>
-        </section>
+    <section class="intro">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a Site Reliability Engineer with a passion for building secure and scalable systems. I love exploring new technologies and making the user experience fun and engaging.</p>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="gimmick">
-            <h3>Skills</h3>
-            <div class="skill">
-                <label>Cloud Infrastructure (AWS, GCP)</label>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 90%;"></div>
-                </div>
+    <section class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Cloud Infrastructure: AWS, GCP</li>
+                <li>CI/CD Tools: Jenkins, GitLab</li>
+                <li>Server Management: Nginx, Apache, Docker</li>
+                <li>Monitoring: Prometheus, Grafana</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Project 1: Cloud Automation</h3>
+                <p>Description of your awesome project...</p>
             </div>
-            <div class="skill">
-                <label>Server Management</label>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 85%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <label>Automation & Monitoring</label>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%;"></div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="gimmick">
-            <h3>Portfolio</h3>
-            <div class="portfolio">
-                <div class="portfolio-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <p>Cloud Optimization Project</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <p>Infrastructure Automation</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h3>Contact Me</h3>
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Your Name">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Your Email">
-                <label for="message">Message</label>
-                <textarea id="message" placeholder="Your Message"></textarea>
-                <button type="submit" onclick="playClickSound()">Send</button>
-            </form>
-        </section>
-
-        <footer>
-            <p>© 2025 Nagulan A. All Rights Reserved.</p>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
