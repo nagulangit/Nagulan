@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nagulan A - Portfolio</title>
+    <title>Nagulan A - Fun & Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
     <!-- Fun Particle Background -->
@@ -18,13 +19,13 @@
         </header>
 
         <!-- About Section -->
-        <section id="about">
+        <section id="about" class="gimmick">
             <h3>About Me</h3>
-            <p>Hi, I'm <span class="highlight">Nagulan</span>, a skilled Site Reliability Engineer with a knack for automating infrastructure, ensuring system reliability, and solving tricky cloud problems.</p>
+            <p>Hi, I'm <span class="highlight">Nagulan</span>, a skilled Site Reliability Engineer with a knack for automating infrastructure, ensuring system reliability, and solving tricky cloud problems. Fun fact: I'm into playful designs!</p>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills">
+        <section id="skills" class="gimmick">
             <h3>Skills</h3>
             <div class="skill">
                 <label>Cloud Infrastructure (AWS, GCP)</label>
@@ -47,7 +48,7 @@
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio">
+        <section id="portfolio" class="gimmick">
             <h3>Portfolio</h3>
             <div class="portfolio">
                 <div class="portfolio-item">
@@ -71,7 +72,7 @@
                 <input type="email" id="email" placeholder="Your Email">
                 <label for="message">Message</label>
                 <textarea id="message" placeholder="Your Message"></textarea>
-                <button type="submit">Send</button>
+                <button type="submit" onclick="playClickSound()">Send</button>
             </form>
         </section>
 
@@ -81,6 +82,5 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </body>
 </html>
