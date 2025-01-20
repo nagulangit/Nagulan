@@ -1,189 +1,88 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 0;
     overflow-x: hidden;
-    transition: all 0.3s ease-in-out;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+    background-color: #333;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #ff6f61;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff6f61;
+    text-transform: uppercase;
+}
+
+.intro, .skills, .projects {
+    padding: 40px 0;
+    text-align: center;
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
 }
 
-/* Header */
-header {
-    text-align: center;
-    margin-bottom: 50px;
-    position: relative;
+ul {
+    list-style: none;
+    margin-top: 20px;
 }
 
-header .glow {
-    font-size: 3em;
-    color: #ff00ff;
-    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
-    animation: glow 2s infinite;
-}
-
-header .typing {
-    font-size: 1.5em;
-    color: #00ffff;
-    border-right: 2px solid #00ffff;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 3s steps(20, end), blink 0.6s step-end infinite;
-}
-
-/* About Section */
-section {
-    margin-bottom: 40px;
-}
-
-section h3 {
-    font-size: 2em;
-    color: #ff00ff;
-    border-bottom: 2px solid #ff00ff;
+li {
     margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
-.highlight {
-    color: #00ffff;
-    font-weight: bold;
-}
-
-/* Skills Section */
-.skill {
-    margin-bottom: 20px;
-    padding: 5px 0;
-    font-size: 1.1em;
-}
-
-.skill label {
-    font-size: 1.2em;
-}
-
-.skill-bar {
-    background: #282828;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 5px;
-    box-shadow: 0 0 10px #00ffff;
-}
-
-.skill-level {
-    height: 12px;
-    background: #ff00ff;
-    transition: width 2s;
-}
-
-/* Portfolio Section */
-.portfolio {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.portfolio-item {
-    flex: 1 1 calc(50% - 20px);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.portfolio-item img {
-    max-width: 100%;
-    border-radius: 15px;
-    filter: brightness(1);
-    transition: transform 0.3s ease-in-out, filter 0.3s;
-}
-
-.portfolio-item:hover img {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-}
-
-.portfolio-item:hover {
-    transform: rotate(10deg);
-}
-
-/* Contact Section */
-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-}
-
-form input, form textarea, form button {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ff00ff;
-    border-radius: 5px;
-    background: #282828;
-    color: #e0e0e0;
-    transition: 0.3s;
-}
-
-form button {
-    background: #ff00ff;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-form button:hover {
-    background: #00ffff;
-    transform: scale(1.1);
-}
-
-form input:focus, form textarea:focus, form button:hover {
-    background: #333333;
-    border-color: #00ffff;
-}
-
-/* Footer */
 footer {
     text-align: center;
+    padding: 20px;
+    background-color: #333;
+    font-size: 0.9rem;
+}
+
+footer p {
+    color: #bbb;
+}
+
+.project-card {
+    background-color: #333;
     margin-top: 30px;
-    color: #ff00ff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Animations */
-@keyframes glow {
-    0%, 100% {
-        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
-    }
-    50% {
-        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
-    }
+.project-card:hover {
+    transform: scale(1.05);
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+.project-card h3 {
+    color: #fff;
 }
 
-@keyframes blink {
-    from, to {
-        border-right-color: transparent;
-    }
-    50% {
-        border-right-color: #ff00ff;
-    }
+.project-card p {
+    color: #ccc;
 }
 
-/* Particles Background */
+/* Particle.js full-screen background */
 #particles-js {
     position: absolute;
     top: 0;
