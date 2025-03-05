@@ -1,39 +1,32 @@
-// Initialize particle.js for background
-particlesJS('particles-js', {
-    "particles": {
-        "number": {
-            "value": 80,
-            "density": {
-                "enable": true,
-                "value_area": 800
-            }
-        },
-        "color": {
-            "value": "#ff6f61"
-        },
-        "shape": {
-            "type": "circle"
-        },
-        "size": {
-            "value": 5,
-            "random": true,
-            "anim": {
-                "enable": true,
-                "speed": 4,
-                "size_min": 0.3
-            }
-        },
-        "opacity": {
-            "value": 0.5,
-            "random": true,
-            "anim": {
-                "enable": true,
-                "speed": 1,
-                "opacity_min": 0.1
-            }
-        }
-    }
-});
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
 
-// AOS (Animate on Scroll)
-AOS.init();
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+img {
+    border-radius: 50%;
+    margin-top: 10px;
+}
