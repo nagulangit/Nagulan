@@ -1,135 +1,32 @@
-/* Global Styles */
-* {
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #111;
-    color: #fff;
-    overflow-x: hidden;
-    padding: 0;
-}
-
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
 }
 
 header {
-    text-align: center;
-    padding: 100px 20px;
     background-color: #333;
-    border-bottom: 5px solid #ff6f61;
-}
-
-header h1 {
-    color: #ff6f61;
-    font-size: 3rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-}
-
-header p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #bbb;
-}
-
-/* Sections */
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-h2 {
-    color: #ff6f61;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.skill-cards, .project-card {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.card, .project-card {
-    background-color: #222;
+    color: white;
     padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-    cursor: pointer;
 }
 
-.card:hover, .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 111, 97, 0.6);
-}
-
-.fun-button {
-    background-color: #ff6f61;
-    padding: 10px 20px;
-    border: none;
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
     border-radius: 5px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-.fun-button:hover {
-    transform: scale(1.1);
-    background-color: #ff3d2e;
 }
 
 footer {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
-    font-size: 1rem;
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-footer p {
-    color: #bbb;
-}
-
-/* Animations */
-[data-aos="fade-up"] {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
-}
-
-[data-aos="fade-up"].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-[data-aos="zoom-in"] {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 1s, transform 1s;
-}
-
-[data-aos="zoom-in"].aos-animate {
-    opacity: 1;
-    transform: scale(1);
-}
-
-[data-aos="flip-left"] {
-    opacity: 0;
-    transform: rotateY(90deg);
-    transition: opacity 1s, transform 1s;
-}
-
-[data-aos="flip-left"].aos-animate {
-    opacity: 1;
-    transform: rotateY(0);
+img {
+    border-radius: 50%;
+    margin-top: 10px;
 }
