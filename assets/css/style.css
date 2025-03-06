@@ -17,7 +17,7 @@ body, h1, h2, p, ul {
     background-attachment: fixed; /* Keeps background fixed */
     filter: blur(2px); /* Light blur effect */
     z-index: -1;
-    background-color: black; /* Fill empty spaces with black */
+    background-color: #2e2e2e; /* Dark grey background to blend with image */
 }
 
 /* Content Box */
@@ -27,9 +27,9 @@ body, h1, h2, p, ul {
     max-width: 800px;
     margin: 50px auto;
     padding: 30px;
-    background: rgba(0, 0, 0, 0.75); /* Darker background */
+    background: rgba(50, 50, 50, 0.85); /* Dark grey with slight transparency */
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
     text-align: left; /* Align text properly */
     color: #fff;
     line-height: 1.6;
