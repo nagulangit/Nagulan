@@ -1,40 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nagulan A - Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div class="background-image"></div>
-    
-    <div class="content">
-        <h1>NAGULAN A</h1>
-        <p>Coimbatore, India | 8946052679 | <a href="mailto:nagulanayyasamy226@gmail.com">nagulanayyasamy226@gmail.com</a></p>
-        <p><a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn Profile</a></p>
-        
-        <h2>About Me</h2>
-        <p>Dynamic and detail-oriented Site Reliability Engineer with expertise in cloud infrastructure management and automation.</p>
+<div class="background-image"></div>
+<div class="blast-effect"></div>
+<div class="content">
+    <h1>NAGULAN A</h1>
+    <p>Coimbatore, India | 8946052679 | nagulanayyasamy226@gmail.com | <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn</a></p>
+    <h2>Site Reliability Engineer</h2>
+    <p>GCP Certified | Cloud Automation | Infrastructure Optimization</p>
+</div>
 
-        <h2>Education</h2>
-        <p><b>Bachelor of Engineering in Electronics and Communication</b><br> Coimbatore Institute of Technology (2019-2023)</p>
+<script>
+    // JavaScript to generate blast effect elements dynamically
+    const blastContainer = document.querySelector(".blast-effect");
 
-        <h2>Professional Experience</h2>
-        <p><b>Site Reliability Engineer | Ankercloud | August 2023 – Present</b></p>
-        <ul>
-            <li>Manage client inquiries and resolve infrastructure and website availability tickets.</li>
-            <li>Provide monitoring and troubleshooting support across various cloud services (AWS, GCP).</li>
-            <li>Implement OpenVPN and enforce Git security best practices in production environments.</li>
-            <li>Optimize patch management and conduct security audits.</li>
-            <li>Deploy and manage multiple Node.js applications on EC2.</li>
-        </ul>
-
-        <h2>Skills</h2>
-        <p>Cloud Infrastructure: AWS, GCP | Databases: MySQL | Server Management: Jenkins, PM2, Apache, Nginx</p>
-
-        <h2>Certifications</h2>
-        <p>GCP Certified Associate Cloud Engineer</p>
-    </div>
-</body>
-</html>
+    for (let i = 0; i < 50; i++) {  // Adjust the number for more/less effects
+        let blast = document.createElement("div");
+        blast.style.left = Math.random() * 100 + "vw";
+        blast.style.top = Math.random() * 100 + "vh";
+        blast.style.animationDelay = Math.random() * 2 + "s";
+        blastContainer.appendChild(blast);
+    }
+</script>
