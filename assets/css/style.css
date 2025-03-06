@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik Glitch', cursive;
+    font-family: 'Bungee Shade', cursive;
+    text-transform: uppercase;
 }
 
 body {
     background: black;
+    color: white;
     text-align: center;
     overflow: hidden;
 }
 
-/* VIDEO BACKGROUND */
+/* VIDEO BACKGROUND - RAJINI LEVEL FIRE */
 .video-background {
     position: fixed;
     top: 0;
@@ -28,136 +30,99 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(25%) contrast(200%);
+    filter: brightness(40%) contrast(200%);
 }
 
-/* CONTAINER WITH EXPLOSIONS */
-.content {
-    position: relative;
-    z-index: 1;
-    margin-top: 5vh;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 50px;
-    border-radius: 30px;
-    display: inline-block;
-    max-width: 85%;
-    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.6);
-    animation: wildShake 0.2s infinite alternate ease-in-out;
-}
-
-/* CRAZY HEADING */
+/* SUPERSTAR ENTRY TEXT */
 h1 {
-    font-size: 5em;
-    text-transform: uppercase;
-    text-shadow: 0px 0px 30px red, 0px 0px 50px yellow, 0px 0px 70px blue;
-    animation: flashColors 0.3s infinite alternate, bounce 0.8s infinite alternate ease-in-out, crazyRotate 1.5s infinite ease-in-out;
+    font-size: 6em;
+    text-shadow: 0 0 30px red, 0 0 50px yellow, 0 0 70px blue;
+    animation: rajiniEntry 1s infinite alternate ease-in-out, 
+               neonFlash 0.2s infinite alternate, 
+               fireEffect 1.5s infinite ease-in-out;
 }
 
-/* MULTI-COLORED BLAST EFFECT */
-@keyframes flashColors {
+/* CRAZY RAJINI-STYLE WORD BLAST */
+@keyframes neonFlash {
     0% { color: red; text-shadow: 0 0 30px red; }
-    20% { color: yellow; text-shadow: 0 0 30px yellow; }
-    40% { color: blue; text-shadow: 0 0 30px blue; }
-    60% { color: green; text-shadow: 0 0 30px green; }
-    80% { color: magenta; text-shadow: 0 0 30px magenta; }
-    100% { color: cyan; text-shadow: 0 0 30px cyan; }
+    25% { color: yellow; text-shadow: 0 0 30px yellow; }
+    50% { color: blue; text-shadow: 0 0 30px blue; }
+    75% { color: green; text-shadow: 0 0 30px green; }
+    100% { color: magenta; text-shadow: 0 0 30px magenta; }
 }
 
-/* JUMPING, WIGGLING, ROTATING TEXT */
+/* TEXT EXPLOSION ENTRY */
+@keyframes rajiniEntry {
+    0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+    100% { transform: scale(1) rotate(10deg); opacity: 1; }
+}
+
+/* FIRE EFFECT */
+@keyframes fireEffect {
+    0% { text-shadow: 0 0 40px orange, 0 0 80px red; }
+    50% { text-shadow: 0 0 60px red, 0 0 100px yellow; }
+    100% { text-shadow: 0 0 50px yellow, 0 0 120px orange; }
+}
+
+/* RANDOM SHAKE EFFECT */
 h2, p, li {
-    font-size: 2em;
-    color: white;
+    font-size: 2.5em;
     display: inline-block;
-    position: relative;
-    animation: jumpy 0.5s infinite alternate ease-in-out, rotateText 2s infinite ease-in-out, discoFlash 0.3s infinite alternate;
+    animation: crazyShake 0.3s infinite alternate ease-in-out, 
+               neonFlash 0.2s infinite alternate;
 }
 
-/* CRAZY LINKS */
+/* RAJINI SIGNATURE STYLING */
 a {
     font-size: 2em;
-    color: #ff00ff;
+    color: #ffcc00;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    animation: spinLink 1.5s infinite ease-in-out, flashColors 0.2s infinite alternate;
+    animation: superstarRotate 1s infinite alternate ease-in-out, 
+               neonFlash 0.2s infinite alternate;
 }
 
 a:hover {
     transform: scale(1.5) rotate(20deg);
 }
 
-/* ROTATING, WIGGLING BULLET POINTS */
+/* ROTATING EFFECT LIKE A THALAIVAR GLASS THROW */
+@keyframes superstarRotate {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+/* JUMPING & ROTATING BULLET POINTS */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 li {
-    margin: 10px;
-    animation: crazyTilt 0.8s infinite alternate ease-in-out;
+    margin: 20px;
+    animation: superstarTilt 0.8s infinite alternate ease-in-out;
 }
 
-/* FIREWORK EXPLOSION */
-.fire-blast {
+/* CRAZY TEXT SHAKE */
+@keyframes crazyShake {
+    0% { transform: translateX(-10px) rotate(-5deg); }
+    100% { transform: translateX(10px) rotate(5deg); }
+}
+
+/* EXPLOSION BACKGROUND EFFECT */
+.rajini-fire-blast {
     position: absolute;
     width: 100%;
     height: 100%;
     background: radial-gradient(circle, rgba(255,0,0,0.8), rgba(255,165,0,0.4), transparent);
     mix-blend-mode: screen;
     z-index: -1;
-    animation: fireExplosion 0.5s infinite alternate ease-in-out;
+    animation: explosionEffect 0.5s infinite alternate ease-in-out;
 }
 
-/* RANDOM CRAZY ANIMATIONS */
-@keyframes wildShake {
-    0% { transform: rotate(-5deg) translateX(-5px); }
-    100% { transform: rotate(5deg) translateX(5px); }
-}
-
-@keyframes bounce {
-    0% { transform: translateY(-10px); }
-    100% { transform: translateY(10px); }
-}
-
-@keyframes jumpy {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(-10deg); }
-    50% { transform: translateY(5px) rotate(5deg); }
-    75% { transform: translateY(-5px) rotate(-3deg); }
-}
-
-@keyframes crazyTilt {
-    0% { transform: rotate(-15deg) scale(1); }
-    100% { transform: rotate(15deg) scale(1.2); }
-}
-
-@keyframes spinLink {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(360deg); }
-}
-
-@keyframes rotateText {
-    0% { transform: rotate(-10deg); }
-    50% { transform: rotate(20deg); }
-    100% { transform: rotate(-10deg); }
-}
-
-@keyframes discoFlash {
-    0% { color: red; }
-    20% { color: yellow; }
-    40% { color: blue; }
-    60% { color: green; }
-    80% { color: magenta; }
-    100% { color: cyan; }
-}
-
-@keyframes crazyRotate {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(180deg); }
-    100% { transform: rotate(0deg); }
-}
-
-@keyframes fireExplosion {
+/* FIREWORK EXPLOSION */
+@keyframes explosionEffect {
     0% { opacity: 0.8; transform: scale(1.2); }
     100% { opacity: 0.3; transform: scale(1.5); }
 }
