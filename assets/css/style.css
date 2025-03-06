@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Baloo 2', sans-serif;
 }
 
 body {
     color: white;
     text-align: center;
     overflow: hidden;
+    background: black;
 }
 
+/* Video Background */
 .video-background {
     position: fixed;
     top: 0;
@@ -27,89 +29,92 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(40%); /* Darkens video slightly */
+    filter: brightness(30%) contrast(120%);
 }
 
+/* Main Content */
 .content {
     position: relative;
     z-index: 1;
-    margin-top: 10vh;
+    margin-top: 5vh;
     background: rgba(0, 0, 0, 0.8);
-    padding: 40px;
-    border-radius: 20px;
+    padding: 50px;
+    border-radius: 30px;
     display: inline-block;
-    max-width: 80%;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
-    animation: fadeIn 1.5s ease-in-out;
+    max-width: 85%;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    animation: wiggle 1.5s infinite alternate ease-in-out;
 }
 
-/* Dancing Title */
+/* Funny Dancing Title */
 h1 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
+    font-size: 4em;
     color: #ffcc00;
-    text-shadow: 0px 0px 10px #ffcc00, 0px 0px 20px #ff9900;
-    animation: dance 1s infinite alternate ease-in-out;
+    text-shadow: 0px 0px 20px #ff9900;
+    animation: wobble 1s infinite alternate ease-in-out;
 }
 
-/* Funny Text Bounce */
+/* Text Random Movements */
 h2, p, li {
     display: inline-block;
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: #ddd;
-    animation: bounce 2s infinite ease-in-out;
+    animation: randomJump 1.5s infinite ease-in-out;
 }
 
-/* Funky Hover Effects */
+/* Crazy Links */
 a {
-    color: #00ffcc;
+    color: #ff3399;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.5em;
     transition: all 0.3s ease-in-out;
     display: inline-block;
-    animation: shake 1.5s infinite ease-in-out;
+    animation: spinWiggle 1.8s infinite ease-in-out;
 }
 
 a:hover {
-    color: #ff3399;
-    transform: rotate(-3deg) scale(1.2);
+    color: #00ffcc;
+    transform: rotate(10deg) scale(1.3);
 }
 
-/* List Styling */
+/* Bullet Points Go Wild */
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
-/* Animated Bullet Points */
-li::before {
-    content: "🔥 ";
-    color: #ffcc00;
-    font-size: 1.2em;
-    animation: wiggle 1s infinite alternate ease-in-out;
+li {
+    display: inline-block;
+    margin: 10px;
+    transform: rotate(-5deg);
+    animation: tilt 1.2s infinite alternate ease-in-out;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Random Animations */
+@keyframes wobble {
+    0% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
 }
 
-@keyframes dance {
-    0% { transform: rotate(-5deg) scale(1); }
-    100% { transform: rotate(5deg) scale(1.1); }
+@keyframes randomJump {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-15px) rotate(-10deg); }
+    50% { transform: translateY(10px) rotate(5deg); }
+    75% { transform: translateY(-5px) rotate(-3deg); }
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+@keyframes spinWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(360deg); }
 }
 
-@keyframes shake {
-    0%, 100% { transform: rotate(-2deg); }
-    50% { transform: rotate(2deg); }
+@keyframes tilt {
+    0% { transform: rotate(-10deg) scale(1); }
+    100% { transform: rotate(10deg) scale(1.1); }
 }
 
 @keyframes wiggle {
-    0% { transform: rotate(-5deg); }
-    100% { transform: rotate(5deg); }
+    0% { transform: translateX(-5px) rotate(-5deg); }
+    100% { transform: translateX(5px) rotate(5deg); }
 }
