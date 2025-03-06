@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Righteous&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Bungee Shade', cursive;
     text-transform: uppercase;
+    font-family: 'Righteous', cursive;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
     overflow: hidden;
 }
 
-/* VIDEO BACKGROUND - RAJINI LEVEL FIRE */
+/* Background Video */
 .video-background {
     position: fixed;
     top: 0;
@@ -30,19 +30,24 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(40%) contrast(200%);
+    filter: brightness(40%) contrast(150%);
 }
 
-/* SUPERSTAR ENTRY TEXT */
-h1 {
-    font-size: 6em;
+/* Title Card Logo */
+.title-card img {
+    width: 60%;
+    margin-top: 10vh;
+    animation: superstarEntry 1s ease-in-out infinite alternate, neonFlash 0.5s infinite;
+}
+
+/* Mass Entry Effects */
+h1, h2, p {
+    font-size: 4em;
     text-shadow: 0 0 30px red, 0 0 50px yellow, 0 0 70px blue;
-    animation: rajiniEntry 1s infinite alternate ease-in-out, 
-               neonFlash 0.2s infinite alternate, 
-               fireEffect 1.5s infinite ease-in-out;
+    animation: superstarEntry 1s infinite alternate ease-in-out, neonFlash 0.2s infinite alternate;
 }
 
-/* CRAZY RAJINI-STYLE WORD BLAST */
+/* Neon Flashing Effect */
 @keyframes neonFlash {
     0% { color: red; text-shadow: 0 0 30px red; }
     25% { color: yellow; text-shadow: 0 0 30px yellow; }
@@ -51,67 +56,14 @@ h1 {
     100% { color: magenta; text-shadow: 0 0 30px magenta; }
 }
 
-/* TEXT EXPLOSION ENTRY */
-@keyframes rajiniEntry {
+/* Superstar Entry */
+@keyframes superstarEntry {
     0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
     100% { transform: scale(1) rotate(10deg); opacity: 1; }
 }
 
-/* FIRE EFFECT */
-@keyframes fireEffect {
-    0% { text-shadow: 0 0 40px orange, 0 0 80px red; }
-    50% { text-shadow: 0 0 60px red, 0 0 100px yellow; }
-    100% { text-shadow: 0 0 50px yellow, 0 0 120px orange; }
-}
-
-/* RANDOM SHAKE EFFECT */
-h2, p, li {
-    font-size: 2.5em;
-    display: inline-block;
-    animation: crazyShake 0.3s infinite alternate ease-in-out, 
-               neonFlash 0.2s infinite alternate;
-}
-
-/* RAJINI SIGNATURE STYLING */
-a {
-    font-size: 2em;
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    animation: superstarRotate 1s infinite alternate ease-in-out, 
-               neonFlash 0.2s infinite alternate;
-}
-
-a:hover {
-    transform: scale(1.5) rotate(20deg);
-}
-
-/* ROTATING EFFECT LIKE A THALAIVAR GLASS THROW */
-@keyframes superstarRotate {
-    0% { transform: rotate(-5deg); }
-    100% { transform: rotate(5deg); }
-}
-
-/* JUMPING & ROTATING BULLET POINTS */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 20px;
-    animation: superstarTilt 0.8s infinite alternate ease-in-out;
-}
-
-/* CRAZY TEXT SHAKE */
-@keyframes crazyShake {
-    0% { transform: translateX(-10px) rotate(-5deg); }
-    100% { transform: translateX(10px) rotate(5deg); }
-}
-
-/* EXPLOSION BACKGROUND EFFECT */
-.rajini-fire-blast {
+/* Fire Blast Effect */
+.fire-blast {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -121,7 +73,6 @@ li {
     animation: explosionEffect 0.5s infinite alternate ease-in-out;
 }
 
-/* FIREWORK EXPLOSION */
 @keyframes explosionEffect {
     0% { opacity: 0.8; transform: scale(1.2); }
     100% { opacity: 0.3; transform: scale(1.5); }
