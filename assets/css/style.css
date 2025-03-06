@@ -1,106 +1,55 @@
-/* Reset default styles */
-body, h1, h2, p, ul {
+/* Ensure full-page background image with blur */
+body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     font-family: Arial, sans-serif;
+    position: relative;
+    background: url('assets/video/IMG_3093.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
-/* Background Image - Fully Visible */
+/* Blurred background overlay */
 .background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../video/IMG_3093.jpg') no-repeat center center;
-    background-size: contain; /* Ensure full image is visible */
-    background-attachment: fixed; /* Keep background fixed */
-    filter: blur(5px); /* Slight blur effect */
-    z-index: -1;
-}
-
-/* 🔥 Blast Effect for Empty Areas */
-.blast-effect {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* Particle Animation */
-.blast-effect div {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 69, 0, 0.8); /* Orange-Red Fire Effect */
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
-    animation: blastAnimation 2s infinite alternate;
-}
-
-/* Randomized Blasts */
-.blast-effect div:nth-child(odd) {
-    animation-duration: 1.5s;
-}
-
-.blast-effect div:nth-child(even) {
-    background-color: rgba(255, 215, 0, 0.8); /* Golden Fire Effect */
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-}
-
-/* Blast Animation */
-@keyframes blastAnimation {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-50px) scale(1.5);
-        opacity: 0;
-    }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/video/IMG_3093.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(5px); /* Adjust blur effect */
+    z-index: -1;
 }
 
 /* Content Box */
 .content {
     position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background for text */
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Light transparent background */
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 50%;
 }
 
-/* Headings */
-h1 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #333;
+/* Blast effect animation */
+.blast-effect div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, red, yellow, orange);
+    opacity: 0.7;
+    border-radius: 50%;
+    animation: blastAnimation 2s infinite;
 }
 
-h2 {
-    margin-top: 20px;
-    font-size: 1.8em;
-    color: #444;
-}
-
-/* Paragraphs */
-p {
-    font-size: 1.1em;
-    color: #555;
-}
-
-/* Links */
-a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
+/* Blast effect animation */
+@keyframes blastAnimation {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(2); opacity: 0.5; }
+    100% { transform: scale(0); opacity: 0; }
 }
