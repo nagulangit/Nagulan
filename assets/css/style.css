@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Glitch&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Baloo 2', sans-serif;
+    font-family: 'Press Start 2P', cursive;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
     background: black;
 }
 
-/* Video Background */
+/* VIDEO BACKGROUND */
 .video-background {
     position: fixed;
     top: 0;
@@ -29,56 +29,62 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(30%) contrast(120%);
+    filter: brightness(20%) contrast(150%);
 }
 
-/* Main Content */
+/* CRAZY CONTAINER */
 .content {
     position: relative;
     z-index: 1;
-    margin-top: 5vh;
+    margin-top: 10vh;
     background: rgba(0, 0, 0, 0.8);
     padding: 50px;
     border-radius: 30px;
     display: inline-block;
     max-width: 85%;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
-    animation: wiggle 1.5s infinite alternate ease-in-out;
+    animation: shake 1s infinite alternate ease-in-out;
 }
 
-/* Funny Dancing Title */
+/* JUMPING, FLASHING HEADING */
 h1 {
     font-size: 4em;
+    text-shadow: 0px 0px 30px #ff0000, 0px 0px 60px #ff9900, 0px 0px 90px #ffff00;
     color: #ffcc00;
-    text-shadow: 0px 0px 20px #ff9900;
-    animation: wobble 1s infinite alternate ease-in-out;
+    animation: flashColors 1s infinite, bounce 1.2s infinite alternate ease-in-out;
 }
 
-/* Text Random Movements */
+/* MULTI-COLORED FIRE EFFECT */
+@keyframes flashColors {
+    0% { color: #ff0000; text-shadow: 0 0 20px #ff0000; }
+    25% { color: #ff9900; text-shadow: 0 0 20px #ff9900; }
+    50% { color: #ffff00; text-shadow: 0 0 20px #ffff00; }
+    75% { color: #00ff00; text-shadow: 0 0 20px #00ff00; }
+    100% { color: #ff00ff; text-shadow: 0 0 20px #ff00ff; }
+}
+
+/* JUMPING TEXT */
 h2, p, li {
-    display: inline-block;
     font-size: 1.4em;
-    color: #ddd;
-    animation: randomJump 1.5s infinite ease-in-out;
+    color: white;
+    animation: jumpy 1.5s infinite ease-in-out;
 }
 
-/* Crazy Links */
+/* CRAZY LINKS */
 a {
     color: #ff3399;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5em;
-    transition: all 0.3s ease-in-out;
     display: inline-block;
-    animation: spinWiggle 1.8s infinite ease-in-out;
+    animation: rotateLink 1.8s infinite ease-in-out, flashColors 1s infinite;
 }
 
 a:hover {
-    color: #00ffcc;
-    transform: rotate(10deg) scale(1.3);
+    transform: rotate(20deg) scale(1.3);
 }
 
-/* Bullet Points Go Wild */
+/* BULLET POINTS ROTATING */
 ul {
     list-style-type: none;
     padding: 0;
@@ -87,24 +93,40 @@ ul {
 li {
     display: inline-block;
     margin: 10px;
-    transform: rotate(-5deg);
+    transform: rotate(-10deg);
     animation: tilt 1.2s infinite alternate ease-in-out;
 }
 
-/* Random Animations */
-@keyframes wobble {
-    0% { transform: rotate(-10deg); }
-    100% { transform: rotate(10deg); }
+/* FIRE ANIMATION */
+.fire-blast {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,0,0,0.8), rgba(255,165,0,0.4), transparent);
+    mix-blend-mode: screen;
+    z-index: -1;
+    animation: fireBlast 0.6s infinite alternate ease-in-out;
 }
 
-@keyframes randomJump {
+/* RANDOM CRAZY ANIMATIONS */
+@keyframes shake {
+    0% { transform: rotate(-5deg) translateX(-5px); }
+    100% { transform: rotate(5deg) translateX(5px); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
+}
+
+@keyframes jumpy {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     25% { transform: translateY(-15px) rotate(-10deg); }
     50% { transform: translateY(10px) rotate(5deg); }
     75% { transform: translateY(-5px) rotate(-3deg); }
 }
 
-@keyframes spinWiggle {
+@keyframes rotateLink {
     0%, 100% { transform: rotate(0deg); }
     50% { transform: rotate(360deg); }
 }
@@ -114,7 +136,7 @@ li {
     100% { transform: rotate(10deg) scale(1.1); }
 }
 
-@keyframes wiggle {
-    0% { transform: translateX(-5px) rotate(-5deg); }
-    100% { transform: translateX(5px) rotate(5deg); }
+@keyframes fireBlast {
+    0% { opacity: 0.8; transform: scale(1.1); }
+    100% { opacity: 0.3; transform: scale(1.3); }
 }
