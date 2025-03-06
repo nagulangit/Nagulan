@@ -5,60 +5,72 @@ body, h1, h2, p, ul {
     font-family: Arial, sans-serif;
 }
 
-/* Background Image - Full Fit & Light Blur */
-.background-image {
+/* Background with Gold & Grey Gradient */
+.background-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../video/IMG_3093.jpg') no-repeat center center;
-    background-size: contain; /* Ensures full image is visible without cropping */
-    background-attachment: fixed; /* Keeps background fixed */
-    filter: blur(2px); /* Light blur effect */
-    z-index: -1;
-    background-color: #2e2e2e; /* Dark grey background to blend with image */
+    background: linear-gradient(to bottom, #FFD700 10%, #999 40%, #222 100%); /* Gold to Grey to Black */
+    z-index: -2;
 }
 
-/* Content Box */
+/* Background Image - Full Fit */
+.background-image {
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 90%;
+    background: url('../video/IMG_3093.jpg') no-repeat center center;
+    background-size: contain; /* Ensures full image is visible */
+    background-attachment: fixed;
+    filter: blur(1px); /* Light blur effect */
+    border: 10px solid rgba(255, 215, 0, 0.8); /* Gold border around the image */
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.6); /* Gold glow effect */
+    z-index: -1;
+}
+
+/* Content Box - Dark Grey with Gold Borders */
 .content {
     position: relative;
     z-index: 1;
     max-width: 800px;
     margin: 50px auto;
     padding: 30px;
-    background: rgba(50, 50, 50, 0.9); /* Dark grey with slight transparency */
+    background: rgba(50, 50, 50, 0.9); /* Dark grey with transparency */
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.4); /* Soft gold glow */
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5); /* Gold glow effect */
+    border: 3px solid #FFD700; /* Gold border */
     text-align: left;
     color: #fff;
     line-height: 1.6;
-    border: 2px solid rgba(255, 215, 0, 0.6); /* Gold border */
 }
 
 /* Headings */
 h1 {
     text-align: center;
-    font-size: 2.8em;
-    color: #ffd700; /* Gold effect */
+    font-size: 3em;
+    color: #FFD700; /* Gold */
     text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 2px solid rgba(255, 215, 0, 0.6);
+    letter-spacing: 3px;
     padding-bottom: 10px;
-    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8); /* Gold glow effect */
+    border-bottom: 2px solid rgba(255, 215, 0, 0.7);
+    text-shadow: 3px 3px 10px rgba(255, 215, 0, 1); /* Gold glow effect */
 }
 
 h2 {
     margin-top: 20px;
     font-size: 2em;
-    color: #ffcc33;
-    text-shadow: 1px 1px 5px rgba(255, 204, 51, 0.7);
+    color: #ffcc33; /* Light Gold */
+    text-shadow: 1px 1px 5px rgba(255, 204, 51, 0.8);
 }
 
 /* Paragraphs */
 p {
     font-size: 1.3em;
-    color: #f8e6a0; /* Light gold text */
+    color: #f8e6a0; /* Soft Gold */
 }
 
 /* Links */
@@ -80,7 +92,7 @@ ul {
     color: #ffdd44;
 }
 
-/* Proper Spacing Between Sections */
+/* Section Spacing */
 .section {
     margin-bottom: 20px;
     padding-bottom: 10px;
