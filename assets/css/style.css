@@ -24,36 +24,36 @@ body, h1, h2, p, ul {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(255, 215, 0, 0.8)); /* Dark Black & Gold */
+    background: rgba(0, 0, 0, 0.6); /* Transparent Black */
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.6); /* Golden Glow Effect */
-    color: gold;
+    box-shadow: 0px 0px 20px rgba(100, 100, 100, 0.6); /* Grey Glow Effect */
+    color: white;
     text-align: center;
 }
 
 /* Headings */
 h1 {
     font-size: 3em;
-    color: gold;
-    text-shadow: 4px 4px 10px rgba(255, 215, 0, 0.8), 0px 0px 20px black;
+    color: white;
+    text-shadow: 4px 4px 10px rgba(100, 100, 100, 0.8), 0px 0px 20px black;
     font-weight: bold;
 }
 
 h2 {
     font-size: 2em;
-    color: gold;
-    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.6);
+    color: white;
+    text-shadow: 2px 2px 10px rgba(100, 100, 100, 0.6);
 }
 
 /* Paragraphs */
 p {
     font-size: 1.2em;
-    color: gold;
+    color: white;
 }
 
 /* Links */
 a {
-    color: gold;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s ease;
@@ -61,7 +61,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: #ffcc00;
+    color: grey;
 }
 
 /* List Styling */
@@ -72,6 +72,6 @@ ul {
 
 ul li {
     font-size: 1.2em;
-    color: gold;
+    color: white;
     padding: 5px 0;
 }
