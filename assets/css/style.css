@@ -1,72 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-* {
+/* Reset default margins */
+body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-body {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Background Image with Blur Effect */
+/* Background Image with Blur */
 .background-image {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/IMG_3093.jpg') no-repeat center center/cover;
-    filter: blur(4px);  /* Slight blur effect */
+    background: url('../video/IMG_3093.jpg') no-repeat center center;
+    background-size: cover; /* Perfectly fit without zoom */
+    filter: blur(5px); /* Slight blur effect */
     z-index: -1;
 }
 
 /* Content Box */
 .content {
+    position: relative;
+    z-index: 1;
     max-width: 800px;
     margin: 50px auto;
-    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Light transparent background */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Headings */
 h1 {
+    text-align: center;
     font-size: 2.5em;
-    font-weight: 600;
-    color: #ffcc00;
+    color: #333;
 }
 
 h2 {
     margin-top: 20px;
     font-size: 1.8em;
-    color: #ff9900;
+    color: #444;
 }
 
-p, li {
-    font-size: 1.2em;
-    line-height: 1.6;
+/* Paragraphs */
+p {
+    font-size: 1.1em;
+    color: #555;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    background: rgba(255, 255, 255, 0.1);
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-
+/* Links */
 a {
-    color: #00ccff;
+    color: #007BFF;
     text-decoration: none;
     font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
 }
