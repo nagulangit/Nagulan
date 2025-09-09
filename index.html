@@ -3,72 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nagulan Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Nagulan A - Site Reliability Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1a73e8;
+            border-bottom: 2px solid #1a73e8;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .skills li {
+            margin-bottom: 8px;
+        }
+
+        .experience h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .experience em {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .experience ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        /* Contact links */
+        .contact-info p, .contact-info a {
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media(max-width: 600px){
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="background-container"></div>
-
-    <div class="content">
+    <div class="container">
         <!-- Header -->
-        <h1>Nagulan A</h1>
-        <h2>Site Reliability Engineer</h2>
-        <p>📍 88/69 Thannaciappan Kovil Street, Pollachi</p>
-        <p>📞 83456798 | ✉️ nayudeniuwnewunciuew282@gmail.com</p>
-        <p>🔗 <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn</a></p>
+        <header>
+            <h1>Nagulan A</h1>
+            <h2>Site Reliability Engineer</h2>
+            <div class="contact-info">
+                <p>📍 88/69 Thannaciappan Kovil Street, Pollachi</p>
+                <p>📞 83456798 | ✉️ nayudeniuwnewunciuew282@gmail.com</p>
+                <p>🔗 <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn</a></p>
+            </div>
+        </header>
 
         <!-- About Me -->
-        <h2>About Me</h2>
-        <p>
-            Site Reliability Engineer at <strong>AnkerCloud</strong> since August 2023, specializing in 
-            cloud infrastructure, automation, and system reliability. 
-            <br>
-            AWS Solutions Architect – Associate and GCP Associate Cloud Engineer certified, 
-            with experience in secure, scalable deployments. 
-            <br>
-            Skilled in container orchestration, disaster recovery, and observability using modern 
-            DevOps tools, focused on delivering resilient and efficient systems.
-        </p>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Site Reliability Engineer at <strong>AnkerCloud</strong> since August 2023, specializing in cloud infrastructure, 
+                automation, and system reliability. AWS Solutions Architect – Associate and GCP Associate Cloud Engineer certified, 
+                with experience in secure, scalable deployments. Skilled in container orchestration, disaster recovery, 
+                and observability using modern DevOps tools, focused on delivering resilient and efficient systems.
+            </p>
+        </section>
 
         <!-- Education -->
-        <h2>Education</h2>
-        <p><strong>Bachelor of Engineering in Electronics and Communication</strong></p>
-        <p>Coimbatore Institute of Technology (2019 - 2023)</p>
+        <section>
+            <h2>Education</h2>
+            <p><strong>Bachelor of Engineering in Electronics and Communication</strong></p>
+            <p>Coimbatore Institute of Technology (2019 - 2023)</p>
+        </section>
 
         <!-- Certifications -->
-        <h2>Certifications</h2>
-        <ul>
-            <li>✅ AWS Certified Solutions Architect - Associate</li>
-            <li>✅ Google Cloud Certified Associate Cloud Engineer</li>
-        </ul>
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>✅ AWS Certified Solutions Architect - Associate</li>
+                <li>✅ Google Cloud Certified Associate Cloud Engineer</li>
+            </ul>
+        </section>
 
         <!-- Skills -->
-        <h2>Skills</h2>
-        <ul>
-            <li>☁️ <strong>Cloud Platforms:</strong> AWS (EC2, S3, RDS, ELB, EKS, IAM, VPC, Route53, CloudFront, WAF, Lambda), GCP (Compute Engine, Storage, Cloud SQL, Functions, Kubernetes)</li>
-            <li>⚙️ <strong>CI/CD & IaC:</strong> Jenkins, GitLab, Terraform, Pulumi, Ansible, CloudFormation</li>
-            <li>🐳 <strong>Containers & Orchestration:</strong> Docker, ECS, EKS, Kubernetes</li>
-            <li>📊 <strong>Monitoring & Logging:</strong> Prometheus, Grafana, CloudWatch, Log-based alerts</li>
-            <li>💾 <strong>Databases:</strong> MySQL, MongoDB</li>
-            <li>🔐 <strong>Security:</strong> Git best practices, OpenVPN, AWS WAF, IAM</li>
-            <li>🛠 <strong>Server Management:</strong> Apache2, Nginx, PM2, Automated Backups</li>
-        </ul>
+        <section>
+            <h2>Skills</h2>
+            <ul class="skills">
+                <li>☁️ <strong>Cloud Platforms:</strong> AWS (EC2, S3, RDS, ELB, EKS, IAM, VPC, Route53, CloudFront, WAF, Lambda), GCP (Compute Engine, Storage, Cloud SQL, Functions, Kubernetes)</li>
+                <li>⚙️ <strong>CI/CD & IaC:</strong> Jenkins, GitLab, Terraform, Pulumi, Ansible, CloudFormation</li>
+                <li>🐳 <strong>Containers & Orchestration:</strong> Docker, ECS, EKS, Kubernetes</li>
+                <li>📊 <strong>Monitoring & Logging:</strong> Prometheus, Grafana, CloudWatch, Log-based alerts</li>
+                <li>💾 <strong>Databases:</strong> MySQL, MongoDB</li>
+                <li>🔐 <strong>Security:</strong> Git best practices, OpenVPN, AWS WAF, IAM</li>
+                <li>🛠 <strong>Server Management:</strong> Apache2, Nginx, PM2, Automated Backups</li>
+            </ul>
+        </section>
 
         <!-- Professional Experience -->
-        <h2>Professional Experience</h2>
-        <h3>Site Reliability Engineer | AnkerCloud</h3>
-        <p><em>August 2023 – Present</em></p>
-        <ul>
-            <li>Performed zero-downtime OS upgrades and seamless AWS to GCP cloud migration, ensuring 99%+ uptime.</li>
-            <li>Developed and maintained Jenkins CI/CD pipelines for Node.js, Flask, and WordPress applications.</li>
-            <li>Managed multi-tier AWS infrastructure featuring load balancers, auto-scaling groups, and HA architectures.</li>
-            <li>Implemented containerized hosting for multiple Node.js apps using Docker, improving efficiency.</li>
-            <li>Automated server monitoring and log management using log-based metrics, alerts, and automated backups.</li>
-            <li>Provisioned secure infrastructure using OpenTofu (Terraform) and Pulumi for IaC automation.</li>
-            <li>Recommended and executed cost optimization strategies like instance rightsizing and storage optimization.</li>
-            <li>Set up MySQL databases with user and query tracking for enhanced monitoring.</li>
-            <li>Automated PM2 log uploads to AWS S3 before server shutdown/reboot for better debugging.</li>
-        </ul>
+        <section>
+            <h2>Professional Experience</h2>
+            <div class="experience">
+                <h3>Site Reliability Engineer | AnkerCloud</h3>
+                <em>August 2023 – Present</em>
+                <ul>
+                    <li>Performed zero-downtime OS upgrades and seamless AWS to GCP cloud migration, ensuring 99%+ uptime.</li>
+                    <li>Developed and maintained Jenkins CI/CD pipelines for Node.js, Flask, and WordPress applications.</li>
+                    <li>Managed multi-tier AWS infrastructure featuring load balancers, auto-scaling groups, and HA architectures.</li>
+                    <li>Implemented containerized hosting for multiple Node.js apps using Docker, improving efficiency.</li>
+                    <li>Automated server monitoring and log management using log-based metrics, alerts, and automated backups.</li>
+                    <li>Provisioned secure infrastructure using OpenTofu (Terraform) and Pulumi for IaC automation.</li>
+                    <li>Recommended and executed cost optimization strategies like instance rightsizing and storage optimization.</li>
+                    <li>Set up MySQL databases with user and query tracking for enhanced monitoring.</li>
+                    <li>Automated PM2 log uploads to AWS S3 before server shutdown/reboot for better debugging.</li>
+                </ul>
+            </div>
+        </section>
     </div>
 </body>
 </html>
