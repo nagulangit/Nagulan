@@ -6,6 +6,16 @@
     <title>Nagulan A - Site Reliability Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* ==== Color Options ==== */
+        :root {
+            /* Change only this variable to switch background theme */
+            --bg-color: #1E3A8A; /* Blue Cloud: #1E3A8A | Dark Cement: #2C2C2C | Professional Green: #1E5128 */
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --primary-color: #1A73E8;
+            --text-color: #333;
+            --text-light: #fff;
+        }
+
         /* General Reset */
         * {
             margin: 0;
@@ -15,13 +25,14 @@
         }
 
         body {
-            background: #f4f7f9;
-            color: #333;
+            background: var(--bg-color);
+            color: var(--text-light);
             line-height: 1.6;
+            min-height: 100vh;
         }
 
         a {
-            color: #1a73e8;
+            color: var(--primary-color);
             text-decoration: none;
         }
 
@@ -32,10 +43,11 @@
         .container {
             max-width: 900px;
             margin: 50px auto;
-            padding: 20px;
-            background: #fff;
+            padding: 30px;
+            background: var(--card-bg);
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: var(--text-color);
         }
 
         header {
@@ -46,17 +58,18 @@
         header h1 {
             font-size: 2.5rem;
             font-weight: 700;
+            color: var(--text-light);
         }
 
         header h2 {
             font-size: 1.5rem;
-            color: #555;
+            color: #D1D5DB;
             margin: 10px 0;
         }
 
-        header p {
+        header p, .contact-info p, .contact-info a {
             font-size: 0.95rem;
-            color: #666;
+            color: #E5E7EB;
         }
 
         section {
@@ -66,8 +79,8 @@
         section h2 {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: #1a73e8;
-            border-bottom: 2px solid #1a73e8;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
             display: inline-block;
             padding-bottom: 5px;
         }
@@ -78,6 +91,14 @@
 
         ul li {
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
         }
 
         .skills li {
@@ -100,16 +121,11 @@
             padding-left: 20px;
         }
 
-        /* Contact links */
-        .contact-info p, .contact-info a {
-            font-size: 0.95rem;
-        }
-
         /* Responsive */
         @media(max-width: 600px){
             .container {
                 margin: 20px;
-                padding: 15px;
+                padding: 20px;
             }
 
             header h1 {
@@ -118,6 +134,10 @@
 
             header h2 {
                 font-size: 1.2rem;
+            }
+
+            ul li img {
+                width: 30px;
             }
         }
     </style>
@@ -130,7 +150,7 @@
             <h2>Site Reliability Engineer</h2>
             <div class="contact-info">
                 <p>📍 88/69 Thannaciappan Kovil Street, Pollachi</p>
-                <p>📞 8946052679 | ✉️ nagulanayyasamy226@gmail.com</p>
+                <p>📞 83456798 | ✉️ nayudeniuwnewunciuew282@gmail.com</p>
                 <p>🔗 <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn</a></p>
             </div>
         </header>
@@ -157,8 +177,14 @@
         <section>
             <h2>Certifications</h2>
             <ul>
-                <li>✅ AWS Certified Solutions Architect - Associate</li>
-                <li>✅ Google Cloud Certified Associate Cloud Engineer</li>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Logo">
+                    AWS Certified Solutions Architect - Associate
+                </li>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Cloud_Logo.svg" alt="GCP Logo">
+                    Google Cloud Certified Associate Cloud Engineer
+                </li>
             </ul>
         </section>
 
