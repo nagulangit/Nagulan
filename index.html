@@ -3,36 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nagulan A - Site Reliability Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Nagulan Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* ==== Color Options ==== */
-        :root {
-            /* Change only this variable to switch background theme */
-            --bg-color: #1E3A8A; /* Blue Cloud: #1E3A8A | Dark Cement: #2C2C2C | Professional Green: #1E5128 */
-            --card-bg: rgba(255, 255, 255, 0.95);
-            --primary-color: #1A73E8;
-            --text-color: #333;
-            --text-light: #fff;
-        }
-
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
+        /* General Styling */
         body {
-            background: var(--bg-color);
-            color: var(--text-light);
-            line-height: 1.6;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0D1B2A, #1B263B);
+            color: #E0E8F9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
             min-height: 100vh;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            text-align: center;
+            color: #00C2FF;
+        }
+
+        h2 {
+            color: #4CC9F0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1rem;
         }
 
         a {
-            color: var(--primary-color);
+            color: #FFD700;
             text-decoration: none;
         }
 
@@ -40,104 +59,52 @@
             text-decoration: underline;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 30px;
-            background: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            color: var(--text-color);
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-light);
-        }
-
-        header h2 {
-            font-size: 1.5rem;
-            color: #D1D5DB;
-            margin: 10px 0;
-        }
-
-        header p, .contact-info p, .contact-info a {
-            font-size: 0.95rem;
-            color: #E5E7EB;
-        }
-
-        section {
-            margin-bottom: 30px;
-        }
-
-        section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
         ul {
-            list-style: none;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        ul li img {
-            width: 40px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .skills li {
-            margin-bottom: 8px;
-        }
-
-        .experience h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .experience em {
-            color: #555;
-            font-size: 0.9rem;
-        }
-
-        .experience ul {
-            margin-top: 10px;
             padding-left: 20px;
         }
 
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Certificate Section */
+        .certifications {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cert-item img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
         /* Responsive */
-        @media(max-width: 600px){
+        @media screen and (max-width: 600px) {
             .container {
-                margin: 20px;
                 padding: 20px;
             }
 
-            header h1 {
+            h1 {
                 font-size: 2rem;
             }
 
-            header h2 {
-                font-size: 1.2rem;
-            }
-
-            ul li img {
-                width: 30px;
+            h2 {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -145,82 +112,65 @@
 <body>
     <div class="container">
         <!-- Header -->
-        <header>
-            <h1>Nagulan A</h1>
-            <h2>Site Reliability Engineer</h2>
-            <div class="contact-info">
-                <p>📍 88/69 Thannaciappan Kovil Street, Pollachi</p>
-                <p>📞 83456798 | ✉️ nayudeniuwnewunciuew282@gmail.com</p>
-                <p>🔗 <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn</a></p>
-            </div>
-        </header>
+        <h1>Nagulan A</h1>
+        <h2 style="text-align: center;">Site Reliability Engineer</h2>
+        <div class="contact">
+            📍 Pollachi, India | 📞 83456798 | ✉️ nayudeniuwnewunciuew282@gmail.com <br>
+            🔗 <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn Profile</a>
+        </div>
 
         <!-- About Me -->
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Site Reliability Engineer at <strong>AnkerCloud</strong> since August 2023, specializing in cloud infrastructure, 
-                automation, and system reliability. AWS Solutions Architect – Associate and GCP Associate Cloud Engineer certified, 
-                with experience in secure, scalable deployments. Skilled in container orchestration, disaster recovery, 
-                and observability using modern DevOps tools, focused on delivering resilient and efficient systems.
-            </p>
-        </section>
+        <h2>About Me</h2>
+        <p>
+            Site Reliability Engineer at AnkerCloud since August 2023, specializing in cloud infrastructure, automation,
+            and system reliability. AWS Solutions Architect – Associate and GCP Associate Cloud Engineer certified, with
+            experience in secure, scalable deployments. Skilled in container orchestration, disaster recovery, and observability
+            using modern DevOps tools, focused on delivering resilient and efficient systems.
+        </p>
 
         <!-- Education -->
-        <section>
-            <h2>Education</h2>
-            <p><strong>Bachelor of Engineering in Electronics and Communication</strong></p>
-            <p>Coimbatore Institute of Technology (2019 - 2023)</p>
-        </section>
+        <h2>Education</h2>
+        <p><strong>Bachelor of Engineering in Electronics and Communication</strong></p>
+        <p>Coimbatore Institute of Technology (2019 - 2023)</p>
 
         <!-- Certifications -->
-        <section>
-            <h2>Certifications</h2>
-            <ul>
-                <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Logo">
-                    AWS Certified Solutions Architect - Associate
-                </li>
-                <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Cloud_Logo.svg" alt="GCP Logo">
-                    Google Cloud Certified Associate Cloud Engineer
-                </li>
-            </ul>
-        </section>
+        <h2>Certifications</h2>
+        <div class="certifications">
+            <div class="cert-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Logo">
+                <p>AWS Certified Solutions Architect - Associate</p>
+            </div>
+            <div class="cert-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="GCP Logo">
+                <p>Google Cloud Certified Associate Cloud Engineer</p>
+            </div>
+        </div>
 
         <!-- Skills -->
-        <section>
-            <h2>Skills</h2>
-            <ul class="skills">
-                <li>☁️ <strong>Cloud Platforms:</strong> AWS (EC2, S3, RDS, ELB, EKS, IAM, VPC, Route53, CloudFront, WAF, Lambda), GCP (Compute Engine, Storage, Cloud SQL, Functions, Kubernetes)</li>
-                <li>⚙️ <strong>CI/CD & IaC:</strong> Jenkins, GitLab, Terraform, Pulumi, Ansible, CloudFormation</li>
-                <li>🐳 <strong>Containers & Orchestration:</strong> Docker, ECS, EKS, Kubernetes</li>
-                <li>📊 <strong>Monitoring & Logging:</strong> Prometheus, Grafana, CloudWatch, Log-based alerts</li>
-                <li>💾 <strong>Databases:</strong> MySQL, MongoDB</li>
-                <li>🔐 <strong>Security:</strong> Git best practices, OpenVPN, AWS WAF, IAM</li>
-                <li>🛠 <strong>Server Management:</strong> Apache2, Nginx, PM2, Automated Backups</li>
-            </ul>
-        </section>
+        <h2>Skills</h2>
+        <ul>
+            <li>☁️ <strong>Cloud:</strong> AWS, GCP</li>
+            <li>🚀 <strong>CI/CD & IaC:</strong> Jenkins, GitLab, Terraform, Pulumi, Ansible, CloudFormation</li>
+            <li>🐳 <strong>Containers:</strong> Docker, Kubernetes, ECS, EKS</li>
+            <li>🛠 <strong>Server Management:</strong> Apache2, Nginx, Docker</li>
+            <li>💾 <strong>Databases:</strong> MySQL, MongoDB</li>
+            <li>📈 <strong>Monitoring:</strong> Prometheus, Grafana, CloudWatch, Log-based Alerts</li>
+            <li>🔐 <strong>Security:</strong> AWS WAF, IAM, OpenVPN</li>
+        </ul>
 
-        <!-- Professional Experience -->
-        <section>
-            <h2>Professional Experience</h2>
-            <div class="experience">
-                <h3>Site Reliability Engineer | AnkerCloud</h3>
-                <em>August 2023 – Present</em>
-                <ul>
-                    <li>Performed zero-downtime OS upgrades and seamless AWS to GCP cloud migration, ensuring 99%+ uptime.</li>
-                    <li>Developed and maintained Jenkins CI/CD pipelines for Node.js, Flask, and WordPress applications.</li>
-                    <li>Managed multi-tier AWS infrastructure featuring load balancers, auto-scaling groups, and HA architectures.</li>
-                    <li>Implemented containerized hosting for multiple Node.js apps using Docker, improving efficiency.</li>
-                    <li>Automated server monitoring and log management using log-based metrics, alerts, and automated backups.</li>
-                    <li>Provisioned secure infrastructure using OpenTofu (Terraform) and Pulumi for IaC automation.</li>
-                    <li>Recommended and executed cost optimization strategies like instance rightsizing and storage optimization.</li>
-                    <li>Set up MySQL databases with user and query tracking for enhanced monitoring.</li>
-                    <li>Automated PM2 log uploads to AWS S3 before server shutdown/reboot for better debugging.</li>
-                </ul>
-            </div>
-        </section>
+        <!-- Experience -->
+        <h2>Professional Experience</h2>
+        <p><strong>Site Reliability Engineer | AnkerCloud | August 2023 – Present</strong></p>
+        <ul>
+            <li>Performed zero-downtime OS upgrades and server migrations, including seamless AWS to GCP cloud migration, ensuring 99%+ uptime.</li>
+            <li>Developed and maintained Jenkins CI/CD pipelines for Node.js, Flask, and WordPress applications.</li>
+            <li>Managed multi-tier AWS infrastructure featuring load balancers, auto-scaling groups, and high availability architectures.</li>
+            <li>Implemented containerized hosting using Docker, optimizing resource utilization.</li>
+            <li>Automated server monitoring, log management, and backups for better observability.</li>
+            <li>Set up secure VPN tunnels and infrastructure provisioning using OpenTofu and Pulumi.</li>
+            <li>Recommended cost optimization strategies, reducing cloud costs significantly.</li>
+            <li>Set up MySQL databases with detailed monitoring and automated PM2 log uploads to S3.</li>
+        </ul>
     </div>
 </body>
 </html>
