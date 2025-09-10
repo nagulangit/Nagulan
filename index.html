@@ -3,72 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nagulan Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Nagulan A - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="content">
+    <!-- Subtle Cloud Animation Background -->
+    <div class="background-animation"></div>
+
+    <div class="container">
+        <!-- Header -->
         <header>
             <h1>Nagulan A</h1>
-            <h2>Site Reliability Engineer | Cloud Engineer</h2>
-            <p>📍 Coimbatore, India | 📞 83456798 | ✉️ nayudeniuwnewunciuew282@gmail.com</p>
-            <p>🔗 <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn</a></p>
+            <h2>Site Reliability Engineer & Cloud Engineer</h2>
+            <p class="contact">
+                📍 Coimbatore, India &nbsp; | &nbsp; 📞 83456798 &nbsp; | &nbsp; ✉️ 
+                <a href="mailto:nayudeniuwnewunciuew282@gmail.com">nayudeniuwnewunciuew282@gmail.com</a>
+            </p>
+            <p class="linkedin">
+                🔗 <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn Profile</a>
+            </p>
         </header>
 
-        <section class="about glass">
-            <h2>About Me</h2>
+        <!-- About Me -->
+        <section class="about">
+            <h3>About Me</h3>
             <p>
-                Site Reliability Engineer at AnkerCloud since August 2023, specializing in cloud infrastructure,
-                automation, and system reliability. AWS Solutions Architect – Associate and GCP Associate Cloud Engineer certified,
-                with expertise in secure, scalable deployments. Skilled in container orchestration, disaster recovery, and observability
-                using modern DevOps tools, focused on delivering resilient and efficient systems.
+                I'm a Site Reliability Engineer and Cloud Engineer at AnkerCloud since August 2023, 
+                specializing in **cloud infrastructure**, **automation**, and **system reliability**. 
+                Certified **AWS Solutions Architect – Associate** and **GCP Associate Cloud Engineer**.  
+                Passionate about building **scalable**, **secure**, and **highly available systems** while leveraging 
+                modern DevOps and observability tools.
             </p>
         </section>
 
-        <section class="education glass">
-            <h2>Education</h2>
+        <!-- Education -->
+        <section class="education">
+            <h3>Education</h3>
             <p><strong>Bachelor of Engineering in Electronics and Communication</strong></p>
-            <p>Coimbatore Institute of Technology (2019-2023)</p>
+            <p>Coimbatore Institute of Technology (2019 - 2023)</p>
         </section>
 
-        <section class="certifications glass">
-            <h2>Certifications</h2>
-            <div class="cert-list">
-                <div class="cert-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" />
-                    <p>AWS Certified Solutions Architect - Associate</p>
-                </div>
-                <div class="cert-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Cloud_logo.svg" alt="GCP" />
-                    <p>Google Cloud Certified Associate Cloud Engineer</p>
-                </div>
+        <!-- Certifications -->
+        <section class="certifications">
+            <h3>Certifications</h3>
+            <div class="cert-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Amazon_Web_Services_Logo.svg" alt="AWS Logo">
+                <p>AWS Certified Solutions Architect – Associate</p>
+            </div>
+            <div class="cert-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="GCP Logo">
+                <p>Google Cloud Certified Associate Cloud Engineer</p>
             </div>
         </section>
 
-        <section class="skills glass">
-            <h2>Skills</h2>
+        <!-- Skills -->
+        <section class="skills">
+            <h3>Skills</h3>
             <ul>
-                <li>☁️ Cloud: AWS, GCP</li>
-                <li>🚀 CI/CD & IaC: Jenkins, GitLab, Terraform, Pulumi, Ansible, CloudFormation</li>
-                <li>🐳 Containers: Docker, Kubernetes, ECS, EKS</li>
-                <li>💾 Databases: MySQL, MongoDB</li>
-                <li>📊 Monitoring: Prometheus, Grafana, CloudWatch</li>
-                <li>🔒 Security: IAM, WAF, OpenVPN</li>
+                <li>☁️ **Cloud Platforms:** AWS, GCP</li>
+                <li>🚀 **CI/CD & IaC:** Jenkins, GitLab, Terraform, Pulumi, Ansible, OpenTofu</li>
+                <li>🛠 **Containers & Orchestration:** Docker, Kubernetes, ECS, EKS</li>
+                <li>📊 **Monitoring & Observability:** Prometheus, Grafana, CloudWatch, Logging & Alerts</li>
+                <li>💾 **Databases:** MySQL, MongoDB</li>
+                <li>🔒 **Security:** IAM, WAF, VPN, Git Security Best Practices</li>
             </ul>
         </section>
 
-        <section class="experience glass">
-            <h2>Professional Experience</h2>
-            <p><strong>Site Reliability Engineer | AnkerCloud | Aug 2023 – Present</strong></p>
+        <!-- Professional Experience -->
+        <section class="experience">
+            <h3>Professional Experience</h3>
+            <h4>Site Reliability Engineer | AnkerCloud | Aug 2023 – Present</h4>
             <ul>
-                <li>Performed zero-downtime OS upgrades and seamless AWS-to-GCP cloud migration, achieving 99%+ uptime.</li>
-                <li>Developed optimized CI/CD pipelines using Jenkins and GitLab for Node.js, Flask, and WordPress apps.</li>
-                <li>Managed multi-tier AWS infrastructure with load balancers, auto-scaling, and high-availability setups.</li>
-                <li>Implemented Docker-based application hosting, improving scalability and resource utilization.</li>
-                <li>Automated monitoring, logging, and backups with AWS S3 integration for faster incident resolution.</li>
-                <li>Provisioned secure infrastructure using OpenTofu (Terraform) and Pulumi for IaC automation.</li>
-                <li>Led cost-optimization strategies, reducing overall cloud expenditure significantly.</li>
+                <li>Performed zero-downtime OS upgrades and seamless AWS → GCP migrations ensuring **99%+ uptime**.</li>
+                <li>Built and maintained Jenkins CI/CD pipelines for Node.js, Flask & WordPress apps.</li>
+                <li>Managed **multi-tier AWS infrastructure** with load balancers, auto-scaling groups & HA architectures.</li>
+                <li>Implemented **containerized hosting** using Docker, optimizing scalability and resource usage.</li>
+                <li>Automated monitoring & alerting pipelines with log-based metrics and custom dashboards.</li>
+                <li>Developed **IaC automation** using OpenTofu & Pulumi for secure, repeatable infrastructure.</li>
+                <li>Led cost optimization by **rightsizing instances**, optimizing storage, and cleaning idle resources.</li>
+                <li>Set up **MySQL database monitoring** with user and query tracking for better observability.</li>
             </ul>
         </section>
     </div>
