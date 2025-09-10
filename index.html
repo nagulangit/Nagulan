@@ -8,55 +8,100 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* General Styling */
-        body {
+        /* Reset */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body & Background */
+        body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0D1B2A, #1B263B);
-            color: #E0E8F9;
+            color: #EAF4FF;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
             padding: 40px;
+            background: url('https://cdn.pixabay.com/animation/2022/07/26/13/36/13-36-42-390_512.gif') center/cover no-repeat fixed;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
-        .container {
-            max-width: 800px;
+        /* Animated Gradient Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 30px 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            height: 100%;
+            background: linear-gradient(135deg, rgba(13, 27, 42, 0.8), rgba(27, 38, 59, 0.8));
+            z-index: 0;
         }
 
+        /* Container */
+        .container {
+            max-width: 850px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            padding: 30px 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            animation: slideUp 1.2s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Header */
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             margin-bottom: 5px;
             text-align: center;
-            color: #00C2FF;
+            color: #00C8FF;
+        }
+
+        h3 {
+            text-align: center;
+            color: #FFD700;
+            font-weight: 500;
+            margin-top: 0;
+            font-size: 1.2rem;
         }
 
         h2 {
             color: #4CC9F0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             padding-bottom: 5px;
             margin-top: 30px;
+            font-size: 1.4rem;
         }
 
         p {
-            line-height: 1.6;
+            line-height: 1.7;
             font-size: 1rem;
+            color: #EAF4FF;
         }
 
         a {
             color: #FFD700;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #00E1FF;
         }
 
         ul {
@@ -65,9 +110,10 @@
 
         li {
             margin-bottom: 8px;
+            line-height: 1.6;
         }
 
-        /* Certificate Section */
+        /* Certifications */
         .certifications {
             display: flex;
             flex-direction: column;
@@ -78,11 +124,16 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-item:hover {
+            transform: scale(1.05);
         }
 
         .cert-item img {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             object-fit: contain;
         }
 
@@ -91,20 +142,22 @@
             text-align: center;
             margin-top: 10px;
             font-size: 1rem;
+            color: #EAF4FF;
         }
 
         /* Responsive */
         @media screen and (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
             .container {
                 padding: 20px;
             }
-
             h1 {
                 font-size: 2rem;
             }
-
             h2 {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -115,17 +168,18 @@
         <h1>Nagulan A</h1>
         <h3>Site Reliability Engineer | Cloud Engineer</h3>
         <div class="contact">
-            📍 Pollachi, India | 📞 8946052679 | ✉️ nagulanayyasamy226@gmail.com <br>
+            📍 Pollachi, India | 📞 83456798 | ✉️ nayudeniuwnewunciuew282@gmail.com <br>
             🔗 <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn Profile</a>
         </div>
 
         <!-- About Me -->
         <h2>About Me</h2>
         <p>
-            Site Reliability Engineer at AnkerCloud since August 2023, specializing in cloud infrastructure, automation,
-            and system reliability. AWS Solutions Architect – Associate and GCP Associate Cloud Engineer certified, with
-            experience in secure, scalable deployments. Skilled in container orchestration, disaster recovery, and observability
-            using modern DevOps tools, focused on delivering resilient and efficient systems.
+            I am a passionate <strong>Site Reliability Engineer</strong> and <strong>Cloud Engineer</strong> with expertise in 
+            <strong>AWS</strong> and <strong>GCP</strong>, focused on designing <strong>scalable, secure, and highly available</strong> cloud infrastructures. 
+            Skilled in <strong>automation</strong>, <strong>container orchestration</strong>, <strong>observability</strong>, 
+            and <strong>cloud cost optimization</strong>, I specialize in deploying and maintaining 
+            <strong>resilient, efficient systems</strong> using modern <strong>DevOps practices</strong>.
         </p>
 
         <!-- Education -->
@@ -149,27 +203,27 @@
         <!-- Skills -->
         <h2>Skills</h2>
         <ul>
-            <li>☁️ <strong>Cloud:</strong> AWS, GCP</li>
+            <li>☁️ <strong>Cloud Platforms:</strong> AWS, GCP</li>
             <li>🚀 <strong>CI/CD & IaC:</strong> Jenkins, GitLab, Terraform, Pulumi, Ansible, CloudFormation</li>
-            <li>🐳 <strong>Containers:</strong> Docker, Kubernetes, ECS, EKS</li>
-            <li>🛠 <strong>Server Management:</strong> Apache2, Nginx, Docker</li>
+            <li>🐳 <strong>Containers & Orchestration:</strong> Docker, Kubernetes, ECS, EKS</li>
+            <li>🛠 <strong>Infrastructure Automation:</strong> OpenTofu, Pulumi, Server Provisioning</li>
+            <li>📊 <strong>Monitoring & Observability:</strong> Prometheus, Grafana, CloudWatch, Log-based Alerts</li>
             <li>💾 <strong>Databases:</strong> MySQL, MongoDB</li>
-            <li>📈 <strong>Monitoring:</strong> Prometheus, Grafana, CloudWatch, Log-based Alerts</li>
-            <li>🔐 <strong>Security:</strong> AWS WAF, IAM, OpenVPN</li>
+            <li>🔐 <strong>Security & Networking:</strong> IAM, WAF, OpenVPN, VPC, Load Balancers</li>
         </ul>
 
         <!-- Experience -->
         <h2>Professional Experience</h2>
-        <p><strong>Site Reliability Engineer | AnkerCloud | August 2023 – Present</strong></p>
+        <p><strong>Site Reliability Engineer | Cloud Engineer | AnkerCloud | August 2023 – Present</strong></p>
         <ul>
-            <li>Performed zero-downtime OS upgrades and server migrations, including seamless AWS to GCP cloud migration, ensuring 99%+ uptime.</li>
-            <li>Developed and maintained Jenkins CI/CD pipelines for Node.js, Flask, and WordPress applications.</li>
-            <li>Managed multi-tier AWS infrastructure featuring load balancers, auto-scaling groups, and high availability architectures.</li>
-            <li>Implemented containerized hosting using Docker, optimizing resource utilization.</li>
-            <li>Automated server monitoring, log management, and backups for better observability.</li>
-            <li>Set up secure VPN tunnels and infrastructure provisioning using OpenTofu and Pulumi.</li>
-            <li>Recommended cost optimization strategies, reducing cloud costs significantly.</li>
-            <li>Set up MySQL databases with detailed monitoring and automated PM2 log uploads to S3.</li>
+            <li>Performed <strong>zero-downtime OS upgrades</strong> and <strong>server migrations</strong>, including seamless <strong>AWS → GCP cloud migration</strong> ensuring <strong>99%+ uptime</strong>.</li>
+            <li>Developed and maintained <strong>Jenkins CI/CD pipelines</strong> for Node.js, Flask, and WordPress applications.</li>
+            <li>Designed and managed <strong>multi-tier AWS infrastructure</strong> with load balancers, auto-scaling groups, and HA architectures.</li>
+            <li>Implemented <strong>containerized deployments</strong> using Docker and Kubernetes, optimizing resource usage.</li>
+            <li>Automated <strong>server monitoring</strong>, log management, and backups to enhance observability and reduce downtime.</li>
+            <li>Provisioned secure infrastructure using <strong>OpenTofu (Terraform)</strong> and <strong>Pulumi</strong> for IaC automation.</li>
+            <li>Identified and executed <strong>cloud cost optimization strategies</strong>, achieving significant savings.</li>
+            <li>Configured <strong>MySQL databases</strong> with advanced query monitoring and automated <strong>PM2 log uploads</strong> to S3.</li>
         </ul>
     </div>
 </body>
