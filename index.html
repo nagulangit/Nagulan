@@ -4,113 +4,273 @@
   <meta charset="UTF-8" />
   <title>Nagulan A | Site Reliability & Cloud Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+    :root {
+      --bg: #0b1120;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --border: #1e293b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
     }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
     header {
-      background: #020617;
-      padding: 40px 20px;
-      text-align: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 40px;
+      margin-bottom: 60px;
     }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { color: #94a3b8; }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 800px;
+    }
+
+    .contact {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
 
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+      margin-bottom: 70px;
     }
+
     h2 {
-      border-bottom: 2px solid #334155;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      border-left: 4px solid var(--accent);
+      padding-left: 14px;
     }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
     footer {
+      border-top: 1px solid var(--border);
+      padding: 30px;
       text-align: center;
-      padding: 20px;
-      background: #020617;
-      color: #94a3b8;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
-    a { color: #38bdf8; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Nagulan A</h1>
-  <p>Site Reliability & Cloud Engineer | AWS & GCP</p>
-</header>
+<div class="container">
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    Site Reliability and Cloud Engineer experienced in managing, automating,
-    and optimizing production infrastructure across AWS and GCP. Strong in
-    Kubernetes, observability, incident management, security hardening, and
-    cost optimization.
-  </p>
-</section>
+  <!-- HERO -->
+  <header>
+    <h1>Nagulan A</h1>
+    <p>
+      Site Reliability & Cloud Engineer with hands-on experience in designing,
+      automating, and operating highly available, secure, and cost-optimized
+      cloud infrastructure across AWS and Google Cloud Platform.
+    </p>
 
-<section>
-  <h2>Skills</h2>
-  <ul>
-    <li><strong>Cloud:</strong> AWS, Google Cloud Platform</li>
-    <li><strong>SRE:</strong> Prometheus, Grafana, CloudWatch, GCP Monitoring</li>
-    <li><strong>IaC:</strong> Terraform, Ansible</li>
-    <li><strong>Containers:</strong> Docker, Kubernetes (GKE, EKS)</li>
-    <li><strong>CI/CD:</strong> Jenkins, GitHub Actions, GitLab CI, Cloud Build</li>
-    <li><strong>Languages:</strong> Python, Bash</li>
-  </ul>
-</section>
+    <div class="contact">
+      📍 Pollachi, Tamil Nadu, India &nbsp;|&nbsp;
+      📞 8946052679 &nbsp;|&nbsp;
+      📧 nagulanayyasamy226@gmail.com <br>
+      🔗 <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn Profile</a>
+    </div>
+  </header>
 
-<section>
-  <h2>Experience</h2>
-  <h3>Ankercloud Technologies Pvt. Ltd</h3>
-  <p><em>Site Reliability & Cloud Engineer | Aug 2023 – Present</em></p>
-  <ul>
-    <li>Designed and managed AWS & GCP infrastructure</li>
-    <li>Implemented monitoring and alerting stacks</li>
-    <li>Handled production incidents and RCA</li>
-    <li>Executed AWS ECS → GCP GKE migration</li>
-    <li>Optimized cloud costs by 25–35%</li>
-  </ul>
-</section>
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I am a Site Reliability and Cloud Engineer with strong expertise in
+        Kubernetes, observability, infrastructure automation, incident
+        management, and multi-cloud migrations.
+      </p>
+      <p>
+        I specialize in running production workloads on AWS and GCP, improving
+        system reliability, reducing operational risk, optimizing cloud cost,
+        and implementing DevOps best practices. I focus on building stable,
+        secure, and scalable platforms that support business growth.
+      </p>
+    </div>
+  </section>
 
-<section>
-  <h2>Projects</h2>
-  <ul>
-    <li>AWS ECS → GCP GKE Production Migration</li>
-    <li>GCP Inventory Automation (50+ Services)</li>
-    <li>Prometheus & Grafana Monitoring Stack</li>
-    <li>MongoDB & Redis Docker Migrations</li>
-    <li>CI/CD Automation with Jenkins</li>
-  </ul>
-</section>
+  <!-- SKILLS -->
+  <section>
+    <h2>Technical Skills</h2>
 
-<section>
-  <h2>Certifications</h2>
-  <ul>
-    <li>AWS Certified Solutions Architect – Associate</li>
-    <li>GCP Certified Associate Cloud Engineer</li>
-  </ul>
-</section>
+    <div class="grid">
+      <div class="card">
+        <strong>Cloud Platforms</strong>
+        <ul>
+          <li>AWS</li>
+          <li>Google Cloud Platform (GCP)</li>
+        </ul>
+      </div>
 
-<section>
-  <h2>Contact</h2>
-  <p>📧 nagulanayyasamy226@gmail.com</p>
-  <p>📞 8946052679</p>
-  <p>🔗 <a href="https://linkedin.com/in/nagulan-a-46006325a" target="_blank">LinkedIn</a></p>
-</section>
+      <div class="card">
+        <strong>SRE & Monitoring</strong>
+        <ul>
+          <li>Prometheus, Grafana</li>
+          <li>CloudWatch, GCP Monitoring</li>
+          <li>Incident Response & RCA</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Infrastructure & Automation</strong>
+        <ul>
+          <li>Terraform, Ansible</li>
+          <li>Python, Bash</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Containers & Orchestration</strong>
+        <ul>
+          <li>Docker</li>
+          <li>Kubernetes (GKE, EKS)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>CI/CD & DevOps</strong>
+        <ul>
+          <li>Jenkins</li>
+          <li>GitHub Actions, GitLab CI</li>
+          <li>Cloud Build, ArgoCD</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Security</strong>
+        <ul>
+          <li>IAM & Firewall Policies</li>
+          <li>VAPT & Security Audits</li>
+          <li>Git Security Hardening</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <h2>Professional Experience</h2>
+
+    <div class="card">
+      <h3>Site Reliability & Cloud Engineer</h3>
+      <p><em>Ankercloud Technologies Pvt. Ltd | Aug 2023 – Present</em></p>
+
+      <ul>
+        <li>Designed and maintained production infrastructure on AWS and GCP.</li>
+        <li>Implemented observability using Prometheus, Grafana, CloudWatch, and GCP Monitoring.</li>
+        <li>Handled on-call incidents, system debugging, performance tuning, and RCA documentation.</li>
+        <li>Built reusable Terraform modules and automated infrastructure provisioning.</li>
+        <li>Deployed microservices on GKE and EKS with ingress, autoscaling, secrets, and config maps.</li>
+        <li>Executed AWS ECS to GCP GKE production migration including networking and DNS cutover.</li>
+        <li>Optimized cloud costs by 25–35% through rightsizing and cleanup.</li>
+        <li>Developed a GCP inventory automation tool covering 50+ services across all regions.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Key Projects</h2>
+
+    <div class="card">
+      <ul>
+        <li><strong>AWS ECS → GCP GKE Production Migration:</strong> Migrated production microservices with autoscaling, ingress, and secure networking.</li>
+        <li><strong>GCP Inventory Automation:</strong> Python-based inventory tool for 50+ GCP services across all regions.</li>
+        <li><strong>Prometheus & Grafana Stack:</strong> Improved observability and alert accuracy across multiple servers.</li>
+        <li><strong>MongoDB 5.0 → 8.0 Migration:</strong> Dockerized migration with validated backup and restore.</li>
+        <li><strong>Redis Migration & Slack Alerts:</strong> Redis Docker migration with automated monitoring.</li>
+        <li><strong>CI/CD Pipelines:</strong> Jenkins-based pipelines for automated deployments.</li>
+        <li><strong>EC2 Cost Optimization:</strong> Consolidated multiple Node.js apps using PM2 & Nginx.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section>
+    <h2>Certifications</h2>
+    <div class="card">
+      <ul>
+        <li>AWS Certified Solutions Architect – Associate</li>
+        <li>GCP Certified Associate Cloud Engineer</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <h2>Education</h2>
+    <div class="card">
+      <p>
+        <strong>Bachelor of Engineering (B.E.) – Electronics & Communication Engineering</strong><br>
+        Coimbatore Institute of Technology, Tamil Nadu<br>
+        <em>2019 – 2023</em>
+      </p>
+    </div>
+  </section>
+
+</div>
 
 <footer>
-  © 2025 Nagulan A | Cloud & SRE Portfolio
+  © 2025 Nagulan A · Site Reliability & Cloud Engineer
 </footer>
 
 </body>
